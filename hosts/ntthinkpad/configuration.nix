@@ -18,6 +18,9 @@
       # GNOME
       ./../common/optional/gnome.nix
       ./../common/optional/tlp.nix
+
+      # Hyprland
+      ./../common/optional/hyprland.nix
     ];
 
   # Bootloader.

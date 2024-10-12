@@ -6,29 +6,30 @@
 }:
 
 {
+  imports = [
+    ./../../utils/hyprpaper
+    ./../../utils/waybar
+    ./../../utils/hyprlock
+    ./../../utils/hypridle
+  ];
+
   home.packages = with pkgs; [
     nwg-displays
     grim
     slurp
+    (nerdfonts.override {
+      fonts = [
+	"Mononoki"
+	"JetBrainsMono"
+      ];
+    })
   ];
 
   wayland.windowManager.hyprland = {
     enable = true;
 
-    systemd.enable = true;
+    extraConfig = builtins.readFile ./hyprland.conf;
   };
-
-#  programs.hyprlock = {
-#    enable = true;
-#  };
-
-#  services.hypridle = {
-#    enable = true;
-#  };
-
-#  services.hyprpaper = {
-#    enable = true;
-#  };
 
   programs.alacritty = {
     enable = true;
@@ -37,9 +38,5 @@
   programs.rofi = {
     enable = true;
     package = pkgs.rofi-wayland;
-  };
-
-  programs.waybar = {
-    enable = true;
   };
 }
