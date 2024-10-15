@@ -8,6 +8,8 @@
 {
   imports = [
     ./../features/utils/starship
+    ./../features/themes
+    ./../features/scripts
   ];
 
   home = {

@@ -8,6 +8,7 @@
 {
   imports =
     [
+      ./bluetooth.nix
       ./cups.nix
       ./locale.nix
       ./networking.nix

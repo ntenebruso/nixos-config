@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+options="suspend
+lock
+logout
+poweroff
+reboot"
+
+selected=$(echo "$options" | rofi -dmenu)
+
+case "$selected" in
+  "suspend")
+    systemctl suspend
+    ;;
+  "lock")
+    loginctl lock-session
+    ;;
+  "logout")
+    pkill -u $USER
+    ;;
+  "poweroff")
+    systemctl poweroff
+    ;;
+  "reboot")
+    systemctl reboot
+    ;;
+esac
+

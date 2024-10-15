@@ -11,6 +11,7 @@
     ./../../utils/waybar
     ./../../utils/hyprlock
     ./../../utils/hypridle
+    ./../../utils/dunst
   ];
 
   home.packages = with pkgs; [
@@ -29,6 +30,10 @@
     enable = true;
 
     extraConfig = builtins.readFile ./hyprland.conf;
+    systemd = {
+      enable = true;
+      variables = [ "--all" ];
+    };
   };
 
   programs.alacritty = {
@@ -38,5 +43,6 @@
   programs.rofi = {
     enable = true;
     package = pkgs.rofi-wayland;
+    theme = "gruvbox-dark";
   };
 }

@@ -8,10 +8,10 @@
 {
   services.hyprpaper = {
     enable = true;
-
     settings = {
-      preload = builtins.toString ./wallpaper.png;
-      wallpaper = ", " + ./wallpaper.png;
+      ipc = "off";
+      preload = "${./wallpaper.png}";
+      wallpaper = ",${./wallpaper.png}";
     };
   };
 }
