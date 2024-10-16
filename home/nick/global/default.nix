@@ -10,6 +10,7 @@
     ./../features/utils/starship
     ./../features/themes
     ./../features/scripts
+    ./../features/programs/firefox
   ];
 
   home = {
