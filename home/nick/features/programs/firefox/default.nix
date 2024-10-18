@@ -14,6 +14,7 @@
       isDefault = true;
 
       search.default = "Google";
+      search.force = true;
       extensions = with inputs.firefox-addons.packages."x86_64-linux"; [
         ublock-origin
         bitwarden

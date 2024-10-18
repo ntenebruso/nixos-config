@@ -18,6 +18,9 @@
     nwg-displays
     grim
     slurp
+    pavucontrol
+    fastfetch
+    pcmanfm
     (nerdfonts.override {
       fonts = [
 	"Mononoki"

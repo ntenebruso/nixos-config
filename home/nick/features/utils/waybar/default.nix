@@ -17,7 +17,7 @@
         spacing = 4;
         modules-left = [ "hyprland/workspaces" "mpris" ];
         modules-center = [ "clock" ];
-        modules-right = [ "idle_inhibitor" "pulseaudio" "cpu" "memory" "temperature" "backlight" "battery" "battery#bat2" "tray" ];
+        modules-right = [ "idle_inhibitor" "pulseaudio" "cpu" "memory" "temperature" "backlight" "battery" "tray" ];
 
         # MPRIS
         mpris = {

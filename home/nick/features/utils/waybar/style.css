@@ -62,8 +62,8 @@ tooltip label {
     color: @foreground;
 }
 
-#workspaces button.focused {
-    color: darker(@foreground);
+#workspaces button.active {
+    color: @green;
 }
 
 #mpris {
