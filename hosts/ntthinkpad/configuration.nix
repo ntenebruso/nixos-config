@@ -21,6 +21,9 @@
 
       # Hyprland
       ./../common/optional/hyprland.nix
+
+      # Virtualization
+      ./../common/optional/virtualization.nix
     ];
 
   # Bootloader.

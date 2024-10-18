@@ -12,6 +12,7 @@
     ./../../utils/hyprlock
     ./../../utils/hypridle
     ./../../utils/dunst
+    ./../../programs/alacritty
   ];
 
   home.packages = with pkgs; [
@@ -37,10 +38,6 @@
       enable = true;
       variables = [ "--all" ];
     };
-  };
-
-  programs.alacritty = {
-    enable = true;
   };
 
   programs.rofi = {

@@ -9,7 +9,7 @@
   users.users.nick = {
     isNormalUser = true;
     description = "Nick Tenebruso";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "libvirtd" ];
     packages = with pkgs; [
       # put packages here
     ];

@@ -20,6 +20,7 @@
   environment.systemPackages = with pkgs; [
     wget
     git
+    gcc
     home-manager
   ];
 
