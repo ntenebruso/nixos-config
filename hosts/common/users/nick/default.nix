@@ -14,6 +14,7 @@
       # put packages here
     ];
     initialPassword = "nick";
+    createHome = true;
     shell = pkgs.zsh;
   };
 }
