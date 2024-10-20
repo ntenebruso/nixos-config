@@ -92,7 +92,7 @@
             critical = 15;
           };
           format = "<span color='#b8bb26'>{icon}</span> {capacity}%";
-          format-charging = "<span color='#b8bb26'> </span> {capacity}%";
+          format-charging = "<span color='#b8bb26'>󰂄 </span> {capacity}%";
           format-plugged = "<span color='#b8bb26'> </span> {capacity}%";
           format-alt = "{icon} {time}";
           # format-good = "";  # An empty format will hide the module

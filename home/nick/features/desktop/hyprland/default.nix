@@ -12,6 +12,7 @@
     ./../../utils/hyprlock
     ./../../utils/hypridle
     ./../../utils/dunst
+#    ./../../utils/kanshi
     ./../../programs/alacritty
   ];
 
@@ -22,10 +23,11 @@
     pavucontrol
     fastfetch
     pcmanfm
+    wl-clipboard
     (nerdfonts.override {
       fonts = [
-	"Mononoki"
-	"JetBrainsMono"
+        "Mononoki"
+        "JetBrainsMono"
       ];
     })
   ];
@@ -39,6 +41,9 @@
       variables = [ "--all" ];
     };
   };
+
+  services.network-manager-applet.enable = true;
+  services.blueman-applet.enable = true;
 
   programs.rofi = {
     enable = true;
