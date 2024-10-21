@@ -12,7 +12,7 @@
     ./../../utils/hyprlock
     ./../../utils/hypridle
     ./../../utils/dunst
-#    ./../../utils/kanshi
+    ./../../wallpapers
     ./../../programs/alacritty
   ];
 

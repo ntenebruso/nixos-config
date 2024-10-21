@@ -10,8 +10,8 @@
     enable = true;
     settings = {
       ipc = "off";
-      preload = "${./wallpaper.png}";
-      wallpaper = ",${./wallpaper.png}";
+      preload = "~/.local/share/wallpapers/gruvbox-dark-blue.png";
+      wallpaper = ",~/.local/share/wallpapers/gruvbox-dark-blue.png";
     };
   };
 }
