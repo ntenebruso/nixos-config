@@ -15,8 +15,10 @@
       # Common system
       ./../common/global
 
-      # GNOME
-      ./../common/optional/gnome.nix
+      # Login manager
+      ./../common/optional/sddm.nix
+
+      # TLP
       ./../common/optional/tlp.nix
 
       # Hyprland
@@ -24,6 +26,9 @@
 
       # Virtualization
       ./../common/optional/virtualization.nix
+
+      # Flatpak
+      ./../common/optional/flatpak.nix
     ];
 
   # Bootloader.
