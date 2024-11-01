@@ -30,6 +30,9 @@
     # Display editor
     nwg-displays
 
+    # Polkit
+    lxqt.lxqt-policykit
+
     # Screenshots
     grim
     slurp
@@ -57,6 +60,9 @@
 
     # Clipboard support
     wl-clipboard
+
+    # Media player
+    vlc
 
     # Fonts
     (nerdfonts.override {

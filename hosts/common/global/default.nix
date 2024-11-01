@@ -21,8 +21,14 @@
     wget
     git
     gcc
+    cmake
+    gnumake
     home-manager
   ];
+
+  # Filesystems management
+  services.gvfs.enable = true;
+  services.udisks2.enable = true;
 
   # Install zsh
   programs.zsh.enable = true;

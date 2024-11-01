@@ -2,6 +2,7 @@
 
 options="suspend
 lock
+lock-dpms
 logout
 poweroff
 reboot"
@@ -14,6 +15,9 @@ case "$selected" in
     ;;
   "lock")
     loginctl lock-session
+    ;;
+  "lock-dpms")
+    loginctl lock-session && sleep 3 && hyprctl dispatch dpms off
     ;;
   "logout")
     pkill -u $USER

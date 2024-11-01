@@ -29,6 +29,9 @@
 
       # Flatpak
       ./../common/optional/flatpak.nix
+
+      # GPG
+      ./../common/optional/gpg.nix
     ];
 
   # Bootloader.
@@ -37,6 +40,11 @@
 
   networking.hostName = "ntthinkpad"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  networking.firewall.enable = true;
+
+  # Power key
+  services.logind.powerKey = "suspend";
+  services.logind.powerKeyLongPress = "poweroff";
 
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
