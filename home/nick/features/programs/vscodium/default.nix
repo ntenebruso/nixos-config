@@ -25,12 +25,21 @@
       ms-python.python
       ms-python.pylint
       ms-python.black-formatter
+
+      # Direnv
+      mkhl.direnv
     ];
     userSettings = {
       "editor.fontFamily" = "\"JetBrainsMono Nerd Font Mono\", monospace";
       "prettier.tabWidth" = 4;
       "editor.formatOnSave" = true;
       "workbench.iconTheme" = "material-icon-theme";
+      "editor.defaultFormatter" = "esbenp.prettier-vscode";
     };
+  };
+
+  xdg.desktopEntries.vscodium-wayland = {
+    name = "VSCodium (Wayland)";
+    exec = "codium --ozone-platform=wayland %U";
   };
 }

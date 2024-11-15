@@ -11,6 +11,7 @@
     ./../features/themes
     ./../features/scripts
     ./../features/programs/firefox
+    ./../features/utils/direnv
   ];
 
   home = {

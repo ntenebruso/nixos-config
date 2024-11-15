@@ -27,6 +27,9 @@
       # Virtualization
       ./../common/optional/virtualization.nix
 
+      # Docker
+      ./../common/optional/docker.nix
+
       # Flatpak
       ./../common/optional/flatpak.nix
 
