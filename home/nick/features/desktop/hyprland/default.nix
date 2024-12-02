@@ -65,12 +65,8 @@
     vlc
 
     # Fonts
-    (nerdfonts.override {
-      fonts = [
-        "Mononoki"
-        "JetBrainsMono"
-      ];
-    })
+    nerd-fonts.jetbrains-mono
+    nerd-fonts.mononoki
   ];
 
   services.network-manager-applet.enable = true;
