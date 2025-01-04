@@ -88,8 +88,8 @@
         battery = {
           states = {
             # good = 95;  # This line is commented out
-            warning = 30;
-            critical = 15;
+            warning = 20;
+            critical = 10;
           };
           format = "<span color='#b8bb26'>{icon}</span> {capacity}%";
           format-charging = "<span color='#b8bb26'>󰂄 </span> {capacity}%";

@@ -47,8 +47,8 @@
     };
 
     theme = {
-      name = "Adwaita";
-      package = pkgs.gnome-themes-extra;
+      name = "Gruvbox-Green-Dark";
+      package = (pkgs.gruvbox-gtk-theme.override { themeVariants = [ "green" ]; });
     };
 
     iconTheme = {

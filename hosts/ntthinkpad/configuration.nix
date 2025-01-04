@@ -16,13 +16,16 @@
       ./../common/global
 
       # Login manager
-      ./../common/optional/sddm.nix
+      # ./../common/optional/sddm.nix
 
       # TLP
       ./../common/optional/tlp.nix
 
       # Hyprland
-      ./../common/optional/hyprland.nix
+      # ./../common/optional/hyprland.nix
+
+      # GNOME
+      ./../common/optional/gnome.nix
 
       # Virtualization
       ./../common/optional/virtualization.nix

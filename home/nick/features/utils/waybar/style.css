@@ -91,6 +91,11 @@ tooltip label {
 #tray {
     margin-left: 20px;
 }
+
+#battery.critical {
+    color: @red;
+}
+
 /*
 #idle_inhibitor,
 #pulseaudio,
