@@ -10,14 +10,12 @@
     ./../features/utils/starship
     ./../features/themes
     ./../features/scripts
-    ./../features/programs/firefox
     ./../features/utils/direnv
   ];
 
   home = {
     username = "nick";
     homeDirectory = "/home/nick";
-    stateVersion = "24.05";
   };
 
   programs.zsh = {
@@ -46,7 +44,6 @@
     enable = true;
 
     defaultApplications = {
-      "inode/directory" = [ "pcmanfm.desktop" ];
       "text/html" = [ "firefox.desktop" ];
       "x-scheme-handler/http" = [ "firefox.desktop" ];
       "x-scheme-handler/https" = [ "firefox.desktop" ];
@@ -54,4 +51,7 @@
   };
 
   programs.home-manager.enable = true;
+
+  # Allow unfree packages
+  nixpkgs.config.allowUnfree = true;
 }

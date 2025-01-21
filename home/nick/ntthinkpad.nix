@@ -6,8 +6,9 @@
   imports = [
     ./global
     # ./features/desktop/hyprland
-    ./features/desktop/gnome.nix
-    ./features/programs/vscodium
-    ./features/programs/emacs
+    ./features/desktop/gnome
+    ./features/groups/productivity.nix
   ];
+
+  home.stateVersion = "24.05";
 }

@@ -37,13 +37,9 @@
   programs.vim.enable = true;
   programs.vim.defaultEditor = true;
 
-  # Install neovim
-  programs.neovim.enable = true;
-
-  # Install firefox
-  programs.firefox.enable = true;
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 }
 

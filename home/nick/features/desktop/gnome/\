@@ -17,7 +17,8 @@
       disable-user-extensions = false;
       enabled-extensions = [
         pkgs.gnomeExtensions.blur-my-shell.extensionUuid
-        pkgs.gnomeExtensions.pop-shell.extensionUuid
+        pkgs.gnomeExtensions.paperwm.extensionUuid
+        pkgs.gnomeExtensions.dash-to-dock.extensionUuid
         "user-theme@gnome-shell-extensions.gcampax.github.com"
       ];
     };
@@ -27,10 +28,20 @@
     "org/gnome/shell/extensions/blur-my-shell/panel" = {
       blur = false;
     };
+    "org/gnome/shell/extensions/blur-my-shell/dash-to-dock" = {
+      blur = false;
+    };
+    "org/gnome/shell/extensions/paperwm" = {
+      show-window-position-bar = false;
+    };
   };
 
-  home.packages = with pkgs.gnomeExtensions; [
-    blur-my-shell
-    pop-shell
+  home.packages = with pkgs; [
+    # General utils
+    wl-clipboard
+    # Gnome Extensions
+    gnomeExtensions.blur-my-shell
+    gnomeExtensions.paperwm
+    gnomeExtensions.dash-to-dock
   ];
 }
