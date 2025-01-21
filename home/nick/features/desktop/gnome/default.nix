@@ -35,7 +35,7 @@
       show-window-position-bar = false;
     };
     "org/gnome/Console" = {
-      custom-font = "JetBrainsMono Nerd Font 10";
+      custom-font = "JetBrainsMono Nerd Font 10 Mono";
       audible-bell = false;
     };
   };
