@@ -13,6 +13,9 @@
     "org/gnome/desktop/wm/preferences" = {
       button-layout = "appmenu:minimize,maximize,close";
     };
+    "org/gnome/desktop/interface" = {
+      clock-format = "12h";
+    };
     "org/gnome/shell" = {
       disable-user-extensions = false;
       enabled-extensions = [

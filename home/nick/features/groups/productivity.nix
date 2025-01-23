@@ -17,6 +17,7 @@
   home.packages = with pkgs; [
     libreoffice
     veracrypt
+    keepassxc
   ];
 
   programs.neovim.enable = true;
