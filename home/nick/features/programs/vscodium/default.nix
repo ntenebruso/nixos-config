@@ -26,6 +26,9 @@
       ms-python.pylint
       ms-python.black-formatter
 
+      # LaTeX
+      james-yu.latex-workshop
+
       # Direnv
       mkhl.direnv
     ];

@@ -19,6 +19,7 @@
     "org/gnome/shell" = {
       disable-user-extensions = false;
       enabled-extensions = [
+        pkgs.gnomeExtensions.appindicator.extensionUuid
         pkgs.gnomeExtensions.blur-my-shell.extensionUuid
         pkgs.gnomeExtensions.paperwm.extensionUuid
         pkgs.gnomeExtensions.dash-to-dock.extensionUuid
@@ -46,7 +47,9 @@
   home.packages = with pkgs; [
     # General utils
     wl-clipboard
+    gnome-tweaks
     # Gnome Extensions
+    gnomeExtensions.appindicator
     gnomeExtensions.blur-my-shell
     gnomeExtensions.paperwm
     gnomeExtensions.dash-to-dock

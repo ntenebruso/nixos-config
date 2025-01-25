@@ -15,9 +15,10 @@
   ];
 
   home.packages = with pkgs; [
-    libreoffice
-    veracrypt
-    keepassxc
+    libreoffice # Editing suite
+    veracrypt # Disk encryption
+    keepassxc # Password management
+    texliveFull # LaTeX
   ];
 
   programs.neovim.enable = true;
