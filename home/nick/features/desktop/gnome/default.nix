@@ -21,6 +21,7 @@
       enabled-extensions = [
         pkgs.gnomeExtensions.appindicator.extensionUuid
         pkgs.gnomeExtensions.blur-my-shell.extensionUuid
+        pkgs.gnomeExtensions.caffeine.extensionUuid
         pkgs.gnomeExtensions.paperwm.extensionUuid
         pkgs.gnomeExtensions.dash-to-dock.extensionUuid
         "user-theme@gnome-shell-extensions.gcampax.github.com"
@@ -51,6 +52,7 @@
     # Gnome Extensions
     gnomeExtensions.appindicator
     gnomeExtensions.blur-my-shell
+    gnomeExtensions.caffeine
     gnomeExtensions.paperwm
     gnomeExtensions.dash-to-dock
   ];
