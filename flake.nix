@@ -13,9 +13,15 @@
       url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    plasma-manager = {
+      url = "github:nix-community/plasma-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.home-manager.follows = "home-manager";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, nur, ... }@inputs:
+  outputs = { nixpkgs, home-manager, ... }@inputs:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -23,7 +29,6 @@
     in {
       nixosConfigurations = {
         ntthinkpad = lib.nixosSystem {
-          system = "x86_64-linux";
           modules = [ ./hosts/ntthinkpad/configuration.nix ];
         };
       };
@@ -32,6 +37,7 @@
           inherit pkgs;
           extraSpecialArgs = { inherit inputs; };
           modules = [
+            inputs.plasma-manager.homeManagerModules.plasma-manager
             ./home/nick/ntthinkpad.nix
           ];
         };
