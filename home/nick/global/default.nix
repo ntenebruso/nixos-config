@@ -40,16 +40,6 @@
     '';
   };
 
-  xdg.mimeApps = {
-    enable = true;
-
-    defaultApplications = {
-      "text/html" = [ "firefox.desktop" ];
-      "x-scheme-handler/http" = [ "firefox.desktop" ];
-      "x-scheme-handler/https" = [ "firefox.desktop" ];
-    };
-  };
-
   programs.home-manager.enable = true;
 
   # Allow unfree packages
