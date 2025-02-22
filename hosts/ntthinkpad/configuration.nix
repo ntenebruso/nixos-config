@@ -55,6 +55,12 @@
   services.logind.powerKey = "suspend";
   services.logind.powerKeyLongPress = "poweroff";
 
+  # TLP settings
+  services.tlp.settings = {
+    START_CHARGE_THRESH_BAT0 = 65;
+    STOP_CHARGE_THRESH_BAT0 = 80;
+  };
+
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
