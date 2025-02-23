@@ -28,6 +28,9 @@
     kscreenlocker.appearance = {
       wallpaper = ./../../wallpapers/pictures/sunset.png;
     };
+    session = {
+      sessionRestore.restoreOpenApplicationsOnLogin = "startWithEmptySession";
+    };
   };
 
   programs.konsole = {
