@@ -7,6 +7,7 @@
 
 {
   programs.plasma.shortcuts = {
+    "ActivityManager"."switch-to-activity-b2b68e0e-1fb8-4127-8f56-64ada58551de" = [ ];
     "KDE Keyboard Layout Switcher"."Switch to Last-Used Keyboard Layout" = "Meta+Alt+L";
     "KDE Keyboard Layout Switcher"."Switch to Next Keyboard Layout" = "Meta+Alt+K";
     "kaccess"."Toggle Screen Reader On and Off" = "Meta+Alt+S";
@@ -22,7 +23,7 @@
     "kmix"."mic_mute" = ["Microphone Mute" "Meta+Volume Mute,Microphone Mute" "Meta+Volume Mute,Mute Microphone"];
     "kmix"."mute" = "Volume Mute";
     "ksmserver"."Halt Without Confirmation" = "none,,Shut Down Without Confirmation";
-    "ksmserver"."Lock Session" = ["Meta+Ctrl+L" "Screensaver,Meta+L" "Screensaver,Lock Session"];
+    "ksmserver"."Lock Session" = ["Screensaver,Meta+L" "Screensaver,Lock Session"];
     "ksmserver"."Log Out" = "Ctrl+Alt+Del";
     "ksmserver"."Log Out Without Confirmation" = "none,,Log Out Without Confirmation";
     "ksmserver"."LogOut" = "none,,Log Out";
@@ -97,8 +98,8 @@
     "kwin"."Switch to Screen to the Right" = "none,,Switch to Screen to the Right";
     "kwin"."Toggle Night Color" = [ ];
     "kwin"."Toggle Window Raise/Lower" = "none,,Toggle Window Raise/Lower";
-    "kwin"."Walk Through Windows" = ["Meta+Tab" "Alt+Tab,Alt+Tab,Walk Through Windows"];
-    "kwin"."Walk Through Windows (Reverse)" = ["Meta+Shift+Tab" "Alt+Shift+Tab,Alt+Shift+Tab,Walk Through Windows (Reverse)"];
+    "kwin"."Walk Through Windows" = ["Alt+Tab" "Meta+Tab,Alt+Tab,Walk Through Windows"];
+    "kwin"."Walk Through Windows (Reverse)" = "Alt+Shift+Tab";
     "kwin"."Walk Through Windows Alternative" = "none,,Walk Through Windows Alternative";
     "kwin"."Walk Through Windows Alternative (Reverse)" = "none,,Walk Through Windows Alternative (Reverse)";
     "kwin"."Walk Through Windows of Current Application" = "Alt+`";
@@ -234,7 +235,6 @@
     "plasmashell"."switch to next activity" = "none,,Switch to Next Activity";
     "plasmashell"."switch to previous activity" = "none,,Switch to Previous Activity";
     "plasmashell"."toggle do not disturb" = "none,,Toggle do not disturb";
-    "services/org.kde.konsole.desktop"."_launch" = ["Ctrl+Alt+T" "Meta+Shift+T"];
     "yakuake"."toggle-window-state" = "F12";
   };
 }

@@ -21,6 +21,9 @@
       vue.volar
       svelte.svelte-vscode
 
+      # Golang
+      golang.go
+
       # Python support
       ms-python.python
       ms-python.pylint

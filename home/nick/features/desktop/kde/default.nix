@@ -7,7 +7,7 @@
 
 {
   imports = [
-    ./shortcuts.nix
+    #./shortcuts.nix
     ./../../wallpapers
   ];
 
