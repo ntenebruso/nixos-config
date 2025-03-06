@@ -14,6 +14,7 @@
     ./../../utils/dunst
     ./../../wallpapers
     ./../../programs/alacritty
+    ./../../themes/gruvbox.nix
   ];
 
   wayland.windowManager.hyprland = {
@@ -64,9 +65,10 @@
     # Media player
     vlc
 
-    # Fonts
-    nerd-fonts.jetbrains-mono
+    # Additional Fonts
     nerd-fonts.mononoki
+
+    networkmanagerapplet
   ];
 
   services.network-manager-applet.enable = true;

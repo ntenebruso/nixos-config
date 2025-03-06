@@ -22,13 +22,13 @@
       ./../common/optional/tlp.nix
 
       # Hyprland
-      # ./../common/optional/hyprland.nix
+      ./../common/optional/hyprland.nix
 
       # GNOME
       # ./../common/optional/gnome.nix
 
       # KDE
-      ./../common/optional/kde.nix
+      #./../common/optional/kde.nix
 
       # Virtualization
       ./../common/optional/virtualization.nix
