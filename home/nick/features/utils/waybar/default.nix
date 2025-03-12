@@ -9,6 +9,10 @@
   programs.waybar = {
     enable = true;
 
+    systemd = {
+      enable = true;
+    };
+
     style = builtins.readFile ./style.css;
 
     settings = {
@@ -24,6 +28,7 @@
           format = "{player_icon} {dynamic}";
           format-paused = "{status_icon} <i>{dynamic}</i>";
           format-stopped = "{status_icon} Nothing currently playing";
+          dynamic-order = [ "title" "artist" "position" "length" ];
           player-icons = {
             default = "▶ ";
             mpv = "🎵";
@@ -134,4 +139,7 @@
       };
     };
   };
+
+  # Enable playerctl for music status
+  services.playerctld.enable = true;
 }
