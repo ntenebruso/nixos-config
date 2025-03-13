@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+while true; do
+  battery_info=$(upower -i "$(upower -e | grep BAT)");
+  battery_percentage=$(echo "$battery_info" | grep "percentage" | awk '{print $2}' | tr -d '%')
+  battery_state=$(echo "$battery_info" | grep "state" | awk '{print $2}')
+  if [[ "$battery_state" == "discharging" && "$battery_percentage" -le 20 ]]; then
+    notify-send -u critical -t 10000 "Battery low, plug in soon"
+    sleep 120
+  else
+    sleep 60
+  fi
+done

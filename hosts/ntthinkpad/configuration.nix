@@ -61,6 +61,14 @@
     STOP_CHARGE_THRESH_BAT0 = 80;
   };
 
+  # UPower
+  services.upower = {
+    enable = true;
+    percentageLow = 20;
+    percentageCritical = 5;
+    criticalPowerAction = "PowerOff";
+  };
+
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
