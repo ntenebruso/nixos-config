@@ -22,8 +22,8 @@
 
     extraConfig = builtins.readFile ./hyprland.conf;
     systemd = {
-      enable = true;
-      variables = [ "--all" ];
+      enable = false;
+      #variables = [ "--all" ];
     };
   };
 

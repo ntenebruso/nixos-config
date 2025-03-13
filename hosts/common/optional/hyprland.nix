@@ -9,11 +9,21 @@
   # Enable hyprland
   programs.hyprland.enable = true;
 
+  programs.uwsm = {
+    enable = true;
+    waylandCompositors = {
+      hyprland = {
+        prettyName = "Hyprland";
+        binPath = "/run/current-system/sw/bin/Hyprland";
+      };
+    };
+  };
+
   services.greetd = {
     enable = true;
     settings = {
       default_session = {
-        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --sessions ${pkgs.hyprland}/share/wayland-sessions";
+        command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time";
       };
       terminal = {
         vt = 7;
