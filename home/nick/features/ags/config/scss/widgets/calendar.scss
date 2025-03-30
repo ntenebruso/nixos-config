@@ -1,0 +1,23 @@
+@use "../variables.scss" as vars;
+
+window.Calendar {
+    color: vars.$fg;
+
+    box {
+        background-color: vars.$bg;
+        border: 2px solid vars.$green;
+        border-radius: 10px;
+        padding: 10px;
+        min-width: 200px;
+    }
+
+    calendar {
+        color: vars.$fg;
+        background: transparent;
+        border: none;
+
+        & grid label {
+            color: vars.$bg;
+        }
+    }
+}

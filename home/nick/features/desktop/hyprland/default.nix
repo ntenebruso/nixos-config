@@ -8,13 +8,14 @@
 {
   imports = [
     ./../../utils/hyprpaper
-    ./../../utils/waybar
+    #./../../utils/waybar
     ./../../utils/hyprlock
     ./../../utils/hypridle
-    ./../../utils/dunst
+    #./../../utils/dunst
     ./../../wallpapers
     ./../../programs/alacritty
     ./../../themes/gruvbox.nix
+    ./../../ags
   ];
 
   wayland.windowManager.hyprland = {

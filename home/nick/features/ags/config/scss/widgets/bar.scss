@@ -1,0 +1,140 @@
+@use "sass:color";
+@use "../variables.scss" as vars;
+
+$radius: 7px;
+
+window.Bar {
+    border: none;
+    box-shadow: none;
+    background-color: vars.$bg;
+    color: vars.$fg;
+    font-size: 1.1em;
+    font-weight: bold;
+
+    .item {
+        padding: 0 10px;
+        border-radius: $radius;
+        background: vars.$bg-accent;
+    }
+
+    .SysMenu {
+        margin-left: 5px;
+        margin-right: 10px;
+
+        label {
+            color: vars.$green;
+        }
+    }
+
+    .Workspaces {
+        button {
+            all: unset;
+            background-color: transparent;
+
+            &:hover label {
+                background-color: color.adjust(vars.$fg, $alpha: -0.84);
+                border-color: color.adjust(vars.$green, $alpha: -0.8);
+            }
+
+            &:active label {
+                background-color: color.adjust(vars.$fg, $alpha: -0.8);
+            }
+        }
+
+        label {
+            transition: 200ms;
+            padding: 0 8px;
+            margin: 2px;
+            border-radius: $radius;
+            border: 1pt solid transparent;
+        }
+
+        .focused label {
+            color: vars.$green;
+        }
+    }
+
+    .Time {
+        color: vars.$aqua;
+    }
+
+    .SysTray {
+        margin-right: 10px;
+
+        button {
+            all: unset;
+            padding: 0 4px;
+        }
+    }
+
+    .FocusedClient {
+        color: vars.$green;
+    }
+
+    .Media .Cover {
+        min-height: 1.2em;
+        min-width: 1.2em;
+        border-radius: $radius;
+        background-position: center;
+        background-size: contain;
+    }
+
+    .Battery {
+        margin-right: 5px;
+
+        icon {
+            color: vars.$green;
+        }
+
+        label {
+            margin-left: 5px;
+        }
+    }
+
+    .Brightness {
+        margin-right: 10px;
+
+        icon {
+            color: vars.$green;
+        }
+
+        label {
+            margin-left: 5px;
+        }
+    }
+
+    .AudioSlider {
+        margin-right: 10px;
+
+        * {
+            all: unset;
+        }
+
+        icon {
+            margin-right: 5px;
+        }
+
+        label {
+            margin-left: 5px;
+        }
+
+        trough {
+            background-color: color.adjust(vars.$fg, $alpha: -0.8);
+            border-radius: $radius;
+        }
+
+        highlight {
+            background-color: vars.$green;
+            min-height: 10px;
+            border-radius: $radius;
+        }
+
+        slider {
+            background-color: vars.$fg;
+            border-radius: 2px;
+            min-height: 15px;
+            min-width: 10px;
+            margin: -5px 0;
+        }
+    }
+}

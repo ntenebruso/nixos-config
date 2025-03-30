@@ -1,0 +1,37 @@
+@use "../variables.scss" as vars;
+
+window.OSD {
+    box.OSD {
+        border-radius: 10px;
+        background-color: vars.$bg;
+        padding: 13px 16px;
+        margin: 13px;
+    }
+
+    icon {
+        font-size: 1.4rem;
+    }
+
+    label {
+        font-size: 1.1rem;
+    }
+
+    levelbar {
+        trough {
+            margin: 0 10px;
+            background: transparent;
+            border: none;
+            min-height: 15px;
+            min-width: 100px;
+        }
+
+        block.filled {
+            border: none;
+            background: vars.$green;
+        }
+
+        block {
+            border-radius: 10px;
+        }
+    }
+}

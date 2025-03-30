@@ -50,6 +50,7 @@
   networking.hostName = "ntthinkpad"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
   networking.firewall.enable = true;
+  networking.firewall.checkReversePath = false;
 
   # Power key
   services.logind.powerKey = "suspend";

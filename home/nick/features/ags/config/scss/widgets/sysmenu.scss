@@ -1,0 +1,65 @@
+@use "../variables.scss" as vars;
+
+window.SysMenu {
+    box.container {
+        min-width: 500px;
+        background: vars.$bg;
+        color: vars.$fg;
+        border: 2px solid vars.$green;
+        padding: 5px;
+        border-radius: 10px;
+
+        box.Time {
+            margin: 10px 20px;
+
+            label.time {
+                font-size: 1.7em;
+                font-weight: bold;
+            }
+
+            label.date {
+                font-size: 1.1em;
+            }
+        }
+
+        box.Notifications {
+            margin: 10px 20px;
+
+            label.none {
+                opacity: 0.7;
+            }
+        }
+
+        box.Media {
+            margin: 10px 20px;
+
+            box.player {
+                padding: 10px;
+                border: 2px solid vars.$aqua;
+                border-radius: 10px;
+
+                label.song {
+                    font-weight: bold;
+                }
+
+                box.progress {
+                    margin: 5px 0;
+
+                    levelbar trough {
+                        all: unset;
+                        margin: 0 5px;
+
+                        block.filled {
+                            background: vars.$green;
+                            border: none;
+                        }
+                    }
+                }
+
+                .btn-group button {
+                    margin: 0 3px;
+                }
+            }
+        }
+    }
+}

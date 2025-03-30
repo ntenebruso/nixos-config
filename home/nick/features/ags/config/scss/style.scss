@@ -1,0 +1,23 @@
+@use "./widgets/launcher.scss";
+@use "./widgets/bar.scss";
+@use "./widgets/calendar.scss";
+@use "./widgets/osd.scss";
+@use "./widgets/sysmenu.scss";
+@use "./widgets/notifications.scss";
+@use "./widgets/powermenu.scss";
+@use "./variables.scss" as vars;
+@use "sass:color";
+
+* {
+    font-family: "Mononoki Nerd Font";
+}
+
+button {
+    background: vars.$bg-accent;
+    color: vars.$fg;
+    border: none;
+}
+
+button:hover {
+    background: color.adjust(vars.$bg-accent, $lightness: 10%);
+}
