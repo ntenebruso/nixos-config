@@ -18,7 +18,7 @@ My current setup configures Hyprland and installs a couple helpful utilities. Se
 | Type                | Program        |
 | ------------------- | -------------- |
 | Window manager      | Hyprland       |
-| Top bar             | waybar         |
+| Top bar & shell     | AGS            |
 | Display Editor      | nwg-displays   |
 | Polkit              | lxqt-policykit |
 | Screenshots         | Grim/Slurp     |
