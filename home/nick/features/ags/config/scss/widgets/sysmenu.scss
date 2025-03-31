@@ -9,9 +9,18 @@ window.SysMenu {
         padding: 5px;
         border-radius: 10px;
 
-        box.Time {
+        box.section {
             margin: 10px 20px;
 
+            .icon {
+                all: unset;
+                margin-right: 10px;
+                font-size: 1.2em;
+                color: vars.$green;
+            }
+        }
+
+        box.Time {
             label.time {
                 font-size: 1.7em;
                 font-weight: bold;
@@ -23,16 +32,12 @@ window.SysMenu {
         }
 
         box.Notifications {
-            margin: 10px 20px;
-
             label.none {
                 opacity: 0.7;
             }
         }
 
         box.Media {
-            margin: 10px 20px;
-
             box.player {
                 padding: 10px;
                 border: 2px solid vars.$aqua;
@@ -59,6 +64,10 @@ window.SysMenu {
                 .btn-group button {
                     margin: 0 3px;
                 }
+            }
+
+            label.none {
+                opacity: 0.7;
             }
         }
     }

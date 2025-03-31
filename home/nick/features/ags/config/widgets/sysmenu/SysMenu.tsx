@@ -30,7 +30,7 @@ export default function SysMenu() {
             }}
         >
             <box className="container" vertical>
-                <box className="Time" vertical>
+                <box className="Time section" vertical>
                     <label className="time">{time()}</label>
                     <label className="date">{date()}</label>
                 </box>

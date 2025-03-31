@@ -12,7 +12,7 @@ export default function Notifications() {
     }
 
     return (
-        <box vertical className="Notifications">
+        <box vertical className="Notifications section">
             <box vertical={false}>
                 <button
                     onClick={() =>
@@ -20,12 +20,12 @@ export default function Notifications() {
                             !notifications.dontDisturb
                         )
                     }
-                    css="all:unset;"
+                    className="icon"
                 >
                     {bind(notifications, "dontDisturb").as((dnd) =>
                         dnd ? "󱏩" : "󰂚"
                     )}
-                </button>{" "}
+                </button>
                 <label>Notifications</label>
                 <box hexpand={true} />
                 <button onClick={clearNotifications}>Clear all</button>

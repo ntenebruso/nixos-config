@@ -1,14 +1,14 @@
-import { App, astalify } from "astal/gtk3";
-import { Variable, GLib, bind, Gio } from "astal";
-import { Astal, Gtk, Gdk } from "astal/gtk3";
+import { bind, Gio, GLib, Variable } from "astal";
+import { App, Astal, Gdk, Gtk } from "astal/gtk3";
+import { EventBox } from "astal/gtk3/widget";
+import Battery from "gi://AstalBattery";
 import Hyprland from "gi://AstalHyprland";
 import Mpris from "gi://AstalMpris";
-import Battery from "gi://AstalBattery";
-import Wp from "gi://AstalWp";
 import Network from "gi://AstalNetwork";
 import Tray from "gi://AstalTray";
+import Wp from "gi://AstalWp";
 import Brightness from "../../utils/brightness";
-import { EventBox } from "astal/gtk3/widget";
+import launchApp from "../../utils/launch";
 
 function createMenu(menuModel: Gio.MenuModel, actionGroup: Gio.ActionGroup) {
     const menu = Gtk.Menu.new_from_model(menuModel);
@@ -87,7 +87,15 @@ function AudioSlider() {
 
     return (
         <box className="AudioSlider item" css="min-width: 140px">
-            <button onClicked={() => speaker.set_mute(!speaker.mute)}>
+            <button
+                onClick={(self, e) => {
+                    if (e.button == Astal.MouseButton.PRIMARY) {
+                        speaker.set_mute(!speaker.mute);
+                    } else if (e.button == Astal.MouseButton.SECONDARY) {
+                        launchApp("pavucontrol");
+                    }
+                }}
+            >
                 <icon icon={bind(speaker, "volumeIcon")} />
             </button>
             <slider
@@ -129,6 +137,20 @@ function BatteryLevel() {
                     (p) => `${Math.floor(p * 100)}%`
                 )}
             />
+        </box>
+    );
+}
+
+const idleInhibit = Variable(false);
+function IdleInhibitor() {
+    return (
+        <box className="IdleInhibitor item" vertical={false}>
+            <button
+                halign={Gtk.Align.CENTER}
+                onClick={() => idleInhibit.set(!idleInhibit.get())}
+            >
+                {bind(idleInhibit).as((v) => (v ? "󱡥" : "󰥔"))}
+            </button>
         </box>
     );
 }
@@ -258,7 +280,9 @@ export default function Bar(monitor: Gdk.Monitor) {
 
     return (
         <window
+            name="Bar"
             className="Bar"
+            namespace="bar"
             gdkmonitor={monitor}
             exclusivity={Astal.Exclusivity.EXCLUSIVE}
             anchor={TOP | LEFT | RIGHT}
@@ -277,7 +301,7 @@ export default function Bar(monitor: Gdk.Monitor) {
                 </box>
                 <box hexpand halign={Gtk.Align.END}>
                     <SysTray />
-                    {/* <Wifi /> */}
+                    <IdleInhibitor />
                     <BrightnessLevel />
                     <AudioSlider />
                     <BatteryLevel />

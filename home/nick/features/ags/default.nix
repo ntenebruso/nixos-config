@@ -11,6 +11,7 @@
 
   programs.ags = {
     enable = true;
+
     extraPackages = with inputs.ags.packages.${pkgs.system}; [
       apps
       battery
@@ -21,6 +22,8 @@
       tray
       wireplumber
     ];
+
+    systemd.enable = true;
   };
 
   xdg.configFile."ags" = {

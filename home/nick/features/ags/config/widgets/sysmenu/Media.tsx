@@ -64,11 +64,18 @@ function Player({ player }: { player: Mpris.Player }) {
 export default function Media() {
     const mpris = Mpris.get_default();
     return (
-        <box vertical className="Media">
-            <label halign={Gtk.Align.START}>󰝚 Media</label>
+        <box vertical className="Media section">
+            <box vertical={false}>
+                <label className="icon">󰝚</label>
+                <label>Media</label>
+            </box>
             {bind(mpris, "players").as((players) => {
                 if (players.length == 0) {
-                    return <label>No media currently playing.</label>;
+                    return (
+                        <label className="none">
+                            No media currently playing.
+                        </label>
+                    );
                 }
 
                 return <Player player={players[0]} />;

@@ -58,6 +58,18 @@ window.Bar {
         color: vars.$aqua;
     }
 
+    .IdleInhibitor {
+        font-family: "Mononoki Nerd Font Mono";
+        min-width: 15px;
+        margin-right: 10px;
+
+        button {
+            all: unset;
+            color: vars.$green;
+            font-size: 1.1em;
+        }
+    }
+
     .SysTray {
         margin-right: 10px;
 
@@ -112,6 +124,7 @@ window.Bar {
 
         icon {
             margin-right: 5px;
+            color: vars.$green;
         }
 
         label {

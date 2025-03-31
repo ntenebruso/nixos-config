@@ -1,6 +1,7 @@
 import Apps from "gi://AstalApps";
 import { App, Astal, Gdk, Gtk } from "astal/gtk3";
-import { exec, execAsync, Variable } from "astal";
+import { Variable } from "astal";
+import launchApp from "../../utils/launch";
 
 const MAX_ITEMS = 8;
 
@@ -8,18 +9,12 @@ function hide() {
     App.get_window("Launcher")!.hide();
 }
 
-function launchApp(app: Apps.Application) {
-    execAsync(`uwsm app -- ${app.get_executable()}`).catch((error) =>
-        print(error)
-    );
-}
-
 function AppButton({ app }: { app: Apps.Application }) {
     return (
         <button
             className="AppButton"
             onClicked={() => {
-                launchApp(app);
+                launchApp(app.entry);
                 hide();
             }}
         >
@@ -54,7 +49,7 @@ export default function Applauncher() {
     const text = Variable("");
     const list = text((text) => apps.fuzzy_query(text).slice(0, MAX_ITEMS));
     const onEnter = () => {
-        launchApp(list.get()[0]);
+        launchApp(list.get()[0].entry);
         hide();
     };
 

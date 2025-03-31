@@ -4,7 +4,7 @@ import { timeout } from "astal/time";
 import Wp from "gi://AstalWp";
 import Brightness from "../../utils/brightness";
 
-export default function OSD() {
+export default function OSD(monitor: Gdk.Monitor) {
     const { TOP, BOTTOM, LEFT, RIGHT } = Astal.WindowAnchor;
 
     const speaker = Wp.get_default()?.get_default_speaker();
@@ -41,6 +41,7 @@ export default function OSD() {
             className="OSD"
             layer={Astal.Layer.OVERLAY}
             anchor={BOTTOM}
+            gdkmonitor={monitor}
             application={App}
         >
             <revealer
