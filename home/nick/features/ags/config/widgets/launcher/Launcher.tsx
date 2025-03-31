@@ -45,6 +45,7 @@ export default function Applauncher() {
     const { CENTER } = Gtk.Align;
     const apps = new Apps.Apps();
     const width = Variable(1000);
+    const entry = Variable<Gtk.Entry | null>(null);
 
     const text = Variable("");
     const list = text((text) => apps.fuzzy_query(text).slice(0, MAX_ITEMS));
@@ -64,6 +65,7 @@ export default function Applauncher() {
             onShow={(self) => {
                 text.set("");
                 width.set(self.get_current_monitor().workarea.width);
+                entry.get()?.grab_focus();
             }}
             onKeyPressEvent={function (self, event: Gdk.Event) {
                 if (event.get_keyval()[1] === Gdk.KEY_Escape) self.hide();
@@ -84,6 +86,7 @@ export default function Applauncher() {
                             text={text()}
                             onChanged={(self) => text.set(self.text)}
                             onActivate={onEnter}
+                            setup={(self) => entry.set(self)}
                         />
                         <box spacing={6} vertical>
                             {list.as((list) =>
