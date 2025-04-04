@@ -1,23 +1,28 @@
 @use "../variables.scss" as vars;
+@use "sass:color";
 
 window.Calendar {
     color: vars.$fg;
 
-    box {
+    box.container {
         background-color: vars.$bg;
         border: 2px solid vars.$green;
         border-radius: 10px;
         padding: 10px;
         min-width: 200px;
-    }
 
-    calendar {
-        color: vars.$fg;
-        background: transparent;
-        border: none;
+        calendar {
+            color: vars.$fg;
+            background: transparent;
+            border: none;
 
-        & grid label {
-            color: vars.$bg;
+            &:selected {
+                background: vars.$green;
+            }
+
+            &:indeterminate {
+                color: color.adjust($color: vars.$fg, $alpha: -0.4);
+            }
         }
     }
 }

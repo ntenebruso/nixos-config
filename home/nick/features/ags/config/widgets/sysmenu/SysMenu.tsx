@@ -3,6 +3,10 @@ import { App, Astal, Gdk, Gtk } from "astal/gtk3";
 import Notifications from "./Notifications";
 import Media from "./Media";
 
+function hide() {
+    App.get_window("SysMenu")!.hide();
+}
+
 export default function SysMenu() {
     const width = Variable(1000);
 
@@ -20,7 +24,11 @@ export default function SysMenu() {
         <window
             name="SysMenu"
             className="SysMenu"
-            anchor={Astal.WindowAnchor.TOP | Astal.WindowAnchor.LEFT}
+            anchor={
+                Astal.WindowAnchor.TOP |
+                Astal.WindowAnchor.BOTTOM |
+                Astal.WindowAnchor.LEFT
+            }
             layer={Astal.Layer.OVERLAY}
             visible={false}
             application={App}
@@ -29,13 +37,19 @@ export default function SysMenu() {
                 width.set(self.get_current_monitor().workarea.width);
             }}
         >
-            <box className="container" vertical>
-                <box className="Time section" vertical>
-                    <label className="time">{time()}</label>
-                    <label className="date">{date()}</label>
+            <box>
+                <box vertical>
+                    <box className="container" vertical>
+                        <box className="Time section" vertical>
+                            <label className="time">{time()}</label>
+                            <label className="date">{date()}</label>
+                        </box>
+                        <Notifications />
+                        <Media />
+                    </box>
+                    <eventbox expand onClick={hide} />
                 </box>
-                <Notifications />
-                <Media />
+                <eventbox widthRequest={width()} expand onClick={hide} />
             </box>
         </window>
     );

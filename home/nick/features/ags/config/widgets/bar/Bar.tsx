@@ -100,7 +100,7 @@ function AudioSlider() {
             </button>
             <slider
                 hexpand
-                onDragged={({ value }) => (speaker.volume = value)}
+                onDragged={(self) => (speaker.volume = self.value)}
                 value={bind(speaker, "volume")}
             />
             <label>

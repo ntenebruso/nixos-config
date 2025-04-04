@@ -21,7 +21,6 @@ window.OSD {
             margin: 0 10px;
             background: transparent;
             border: none;
-            min-height: 15px;
             min-width: 100px;
         }
 
@@ -32,6 +31,9 @@ window.OSD {
 
         block {
             border-radius: 10px;
+            margin: 3px 0;
+            background: vars.$bg-accent;
+            border: none;
         }
     }
 }
