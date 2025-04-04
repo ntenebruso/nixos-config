@@ -14,7 +14,7 @@
     #./../../utils/dunst
     ./../../wallpapers
     ./../../programs/alacritty
-    ./../../themes/gruvbox.nix
+    ./../../themes
     ./../../ags
   ];
 
@@ -78,6 +78,5 @@
   programs.rofi = {
     enable = true;
     package = pkgs.rofi-wayland;
-    theme = "gruvbox-dark";
   };
 }

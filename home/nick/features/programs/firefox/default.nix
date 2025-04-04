@@ -23,4 +23,9 @@
       extraConfig = builtins.readFile ./user.js;
     };
   };
+
+  stylix.targets.firefox = {
+    profileNames = [ "nick" ];
+    firefoxGnomeTheme.enable = true;
+  };
 }

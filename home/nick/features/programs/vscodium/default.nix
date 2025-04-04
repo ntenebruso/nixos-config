@@ -37,7 +37,6 @@
         mkhl.direnv
       ];
       userSettings = {
-        "editor.fontFamily" = "\"JetBrainsMono Nerd Font Mono\", monospace";
         "prettier.tabWidth" = 4;
         "editor.formatOnSave" = true;
         "workbench.iconTheme" = "material-icon-theme";

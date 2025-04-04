@@ -8,7 +8,6 @@
 {
   imports = [
     ./../features/utils/starship
-    ./../features/themes/fonts.nix
     ./../features/scripts
     ./../features/utils/direnv
   ];

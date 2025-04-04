@@ -27,7 +27,7 @@ function mapMonitors(widget: (monitor: Gdk.Monitor) => Gtk.Widget) {
 
 App.start({
     css: style,
-    gtkTheme: "Adwaita",
+    // gtkTheme: "Adwaita-dark",
     main() {
         mapMonitors(Bar);
         mapMonitors(NotificationPopups);

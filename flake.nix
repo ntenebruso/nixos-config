@@ -21,6 +21,8 @@
     };
 
     ags.url = "github:aylur/ags";
+
+    stylix.url = "github:danth/stylix";
   };
 
   outputs = { nixpkgs, home-manager, ... }@inputs:
@@ -40,6 +42,7 @@
           extraSpecialArgs = { inherit inputs; };
           modules = [
             inputs.plasma-manager.homeManagerModules.plasma-manager
+            inputs.stylix.homeManagerModules.stylix
             ./home/nick/ntthinkpad.nix
           ];
         };
