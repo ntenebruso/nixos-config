@@ -11,6 +11,10 @@ window.Bar {
     font-size: 1.1em;
     font-weight: bold;
 
+    .container {
+        padding: 5px 0;
+    }
+
     .item {
         padding: 0 10px;
         border-radius: $radius;
@@ -20,9 +24,15 @@ window.Bar {
     .SysMenu {
         margin-left: 5px;
         margin-right: 10px;
+        min-width: 17px;
 
         label {
             color: vars.$green;
+            font-size: 1.2em;
+        }
+
+        label.dnd {
+            color: vars.$orange;
         }
     }
 
@@ -76,7 +86,6 @@ window.Bar {
         button {
             all: unset;
             padding: 0 4px;
-            font-size: 1.1em;
         }
     }
 

@@ -9,6 +9,7 @@ import Tray from "gi://AstalTray";
 import Wp from "gi://AstalWp";
 import Brightness from "../../utils/brightness";
 import launchApp from "../../utils/launch";
+import Notifd from "gi://AstalNotifd";
 
 function createMenu(menuModel: Gio.MenuModel, actionGroup: Gio.ActionGroup) {
     const menu = Gtk.Menu.new_from_model(menuModel);
@@ -266,10 +267,18 @@ function Time({ format = "%H:%M - %A %e." }) {
 }
 
 function SysMenu() {
+    const notifd = Notifd.get_default();
+
     return (
         <eventbox onClick={() => App.toggle_window("SysMenu")}>
             <box className="SysMenu item">
-                <label></label>
+                <label
+                    className={bind(notifd, "dontDisturb").as((d) =>
+                        d ? "dnd" : ""
+                    )}
+                >
+                    󱄅
+                </label>
             </box>
         </eventbox>
     );
@@ -287,10 +296,8 @@ export default function Bar(monitor: Gdk.Monitor) {
             exclusivity={Astal.Exclusivity.EXCLUSIVE}
             anchor={TOP | LEFT | RIGHT}
             application={App}
-            marginTop={5}
-            marginBottom={5}
         >
-            <centerbox>
+            <centerbox className="container">
                 <box hexpand halign={Gtk.Align.START}>
                     <SysMenu />
                     <Workspaces />

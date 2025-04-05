@@ -35,31 +35,33 @@ class NotifiationMap implements Subscribable {
         // notifd.ignoreTimeout = true
 
         notifd.connect("notified", (_, id) => {
-            this.set(
-                id,
-                Notification({
-                    notification: notifd.get_notification(id)!,
+            if (!notifd.dontDisturb) {
+                this.set(
+                    id,
+                    Notification({
+                        notification: notifd.get_notification(id)!,
 
-                    // once hovering over the notification is done
-                    // destroy the widget without calling notification.dismiss()
-                    // so that it acts as a "popup" and we can still display it
-                    // in a notification center like widget
-                    // but clicking on the close button will close it
-                    onHoverLost: () => this.delete(id),
+                        // once hovering over the notification is done
+                        // destroy the widget without calling notification.dismiss()
+                        // so that it acts as a "popup" and we can still display it
+                        // in a notification center like widget
+                        // but clicking on the close button will close it
+                        onHoverLost: () => this.delete(id),
 
-                    // notifd by default does not close notifications
-                    // until user input or the timeout specified by sender
-                    // which we set to ignore above
-                    setup: () =>
-                        timeout(TIMEOUT_DELAY, () => {
-                            /**
-                             * uncomment this if you want to "hide" the notifications
-                             * after TIMEOUT_DELAY
-                             */
-                            // this.delete(id)
-                        }),
-                })
-            );
+                        // notifd by default does not close notifications
+                        // until user input or the timeout specified by sender
+                        // which we set to ignore above
+                        setup: () =>
+                            timeout(TIMEOUT_DELAY, () => {
+                                /**
+                                 * uncomment this if you want to "hide" the notifications
+                                 * after TIMEOUT_DELAY
+                                 */
+                                // this.delete(id)
+                            }),
+                    })
+                );
+            }
         });
 
         // notifications can be closed by the outside before

@@ -18,7 +18,7 @@
   stylix = {
     enable = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
-    image = ../wallpapers/pictures/gruvbox-dark-blue.png;
+    image = ../wallpapers/pictures/forest.jpg;
     polarity = "dark";
 
     fonts = {
@@ -57,5 +57,10 @@
     };
 
     targets.neovim.enable = false;
+  };
+
+  qt = {
+    enable = true;
+    style.name = "adwaita-dark";
   };
 }

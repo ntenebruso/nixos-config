@@ -12,12 +12,12 @@
     font-family: "Mononoki Nerd Font";
 }
 
-button {
-    background: vars.$bg-accent;
-    color: vars.$fg;
-    border: none;
-}
+// button {
+//     background: vars.$bg-accent;
+//     color: vars.$fg;
+//     border: none;
+// }
 
-button:hover {
-    background: color.adjust(vars.$bg-accent, $lightness: 10%);
-}
+// button:hover {
+//     background: color.adjust(vars.$bg-accent, $lightness: 10%);
+// }
