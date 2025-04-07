@@ -23,6 +23,11 @@
     ags.url = "github:aylur/ags";
 
     stylix.url = "github:danth/stylix";
+
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { nixpkgs, home-manager, ... }@inputs:
@@ -41,6 +46,7 @@
           inherit pkgs;
           extraSpecialArgs = { inherit inputs; };
           modules = [
+            inputs.nixvim.homeManagerModules.nixvim
             inputs.plasma-manager.homeManagerModules.plasma-manager
             inputs.stylix.homeManagerModules.stylix
             ./home/nick/ntthinkpad.nix

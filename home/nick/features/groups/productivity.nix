@@ -20,6 +20,4 @@
     keepassxc # Password management
     texliveFull # LaTeX
   ];
-
-  programs.neovim.enable = true;
 }

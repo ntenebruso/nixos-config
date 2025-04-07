@@ -57,6 +57,11 @@
     };
 
     targets.neovim.enable = false;
+
+    targets.gtk.extraCss = ''
+      @define-color accent_color #${config.lib.stylix.colors.base0B};
+      @define-color accent_bg_color #${config.lib.stylix.colors.base0B};
+    '';
   };
 
   qt = {
