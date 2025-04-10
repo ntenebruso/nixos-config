@@ -37,6 +37,9 @@
   programs.vim.enable = true;
   programs.vim.defaultEditor = true;
 
+  # Nix LD
+  programs.nix-ld.enable = true;
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 

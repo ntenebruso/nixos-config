@@ -1,4 +1,4 @@
-import { exec } from "astal";
+import { execAsync } from "astal";
 import { App, Astal, Gdk, Gtk } from "astal/gtk3";
 
 const COMMANDS = [
@@ -36,7 +36,7 @@ const COMMANDS = [
 
 function execute(action: string) {
     App.toggle_window("PowerMenu");
-    exec(action);
+    execAsync(`bash -c "${action}"`);
 }
 
 export default function PowerMenu() {

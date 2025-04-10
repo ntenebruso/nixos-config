@@ -30,6 +30,10 @@ export default function OSD(monitor: Gdk.Monitor) {
         speaker.connect("notify::volume", () => {
             show(speaker.volume, speaker.volumeIcon);
         });
+
+        speaker.connect("notify::mute", () => {
+            show(speaker.volume, speaker.volumeIcon);
+        });
     }
 
     brightness.connect("notify::screen", () => {

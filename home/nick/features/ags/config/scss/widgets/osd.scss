@@ -4,6 +4,7 @@ window.OSD {
     box.OSD {
         border-radius: 10px;
         background-color: vars.$bg;
+        color: vars.$fg;
         padding: 13px 16px;
         margin: 13px;
     }

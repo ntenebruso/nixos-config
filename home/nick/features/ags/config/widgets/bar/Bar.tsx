@@ -295,6 +295,7 @@ export default function Bar(monitor: Gdk.Monitor) {
             gdkmonitor={monitor}
             exclusivity={Astal.Exclusivity.EXCLUSIVE}
             anchor={TOP | LEFT | RIGHT}
+            inhibit={idleInhibit()}
             application={App}
         >
             <centerbox className="container">
