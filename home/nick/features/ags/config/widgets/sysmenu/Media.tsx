@@ -1,4 +1,4 @@
-import { bind } from "astal";
+import { bind, Variable } from "astal";
 import { Gtk } from "astal/gtk3";
 import Mpris from "gi://AstalMpris";
 
@@ -10,6 +10,13 @@ function lengthStr(len: number) {
 }
 
 function Player({ player }: { player: Mpris.Player }) {
+    const pct: Variable<number> = Variable.derive(
+        [bind(player, "position"), bind(player, "length")],
+        (pos, length) => {
+            return pos / length;
+        }
+    );
+
     return (
         <box vertical className="player">
             <label className="song">
@@ -24,13 +31,7 @@ function Player({ player }: { player: Mpris.Player }) {
                 visible={bind(player, "length").as((l) => l > 0)}
             >
                 <label>{bind(player, "position").as(lengthStr)}</label>
-                <levelbar
-                    value={
-                        bind(player, "position").get() /
-                        bind(player, "length").get()
-                    }
-                    hexpand
-                />
+                <levelbar value={pct()} hexpand />
                 <label>{bind(player, "length").as(lengthStr)}</label>
             </box>
             <centerbox vertical={false} className="btn-group">

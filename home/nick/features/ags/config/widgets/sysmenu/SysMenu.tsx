@@ -36,6 +36,10 @@ export default function SysMenu() {
             onShow={(self) => {
                 width.set(self.get_current_monitor().workarea.width);
             }}
+            onDestroy={() => {
+                time.drop();
+                date.drop();
+            }}
         >
             <box>
                 <box vertical>

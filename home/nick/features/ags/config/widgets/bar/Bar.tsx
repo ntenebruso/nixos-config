@@ -10,6 +10,7 @@ import Wp from "gi://AstalWp";
 import Brightness from "../../utils/brightness";
 import launchApp from "../../utils/launch";
 import Notifd from "gi://AstalNotifd";
+import Indicators from "../../utils/indicators";
 
 function createMenu(menuModel: Gio.MenuModel, actionGroup: Gio.ActionGroup) {
     const menu = Gtk.Menu.new_from_model(menuModel);
@@ -256,7 +257,6 @@ function Time({ format = "%H:%M - %A %e." }) {
         1000,
         () => GLib.DateTime.new_now_local().format(format)!
     );
-
     return (
         <eventbox onClick={() => App.toggle_window("Calendar")}>
             <box className="Time item">
@@ -281,6 +281,28 @@ function SysMenu() {
                 </label>
             </box>
         </eventbox>
+    );
+}
+
+function CPUTemp() {
+    const indicators = Indicators.get_default();
+
+    return (
+        <box className="CPUTemp item">
+            <label className="icon"></label>
+            <label>{bind(indicators, "cpu_temp").as((t) => `${t}°C`)}</label>
+        </box>
+    );
+}
+
+function MemUsage() {
+    const indicators = Indicators.get_default();
+
+    return (
+        <box className="MemUsage item">
+            <label className="icon">󰍛</label>
+            <label>{bind(indicators, "mem_usage").as((m) => `${m}%`)}</label>
+        </box>
     );
 }
 
@@ -310,6 +332,8 @@ export default function Bar(monitor: Gdk.Monitor) {
                 <box hexpand halign={Gtk.Align.END}>
                     <SysTray />
                     <IdleInhibitor />
+                    <CPUTemp />
+                    <MemUsage />
                     <BrightnessLevel />
                     <AudioSlider />
                     <BatteryLevel />
