@@ -1,5 +1,4 @@
 import { App, Gdk, Gtk } from "astal/gtk3";
-import style from "./scss/style.scss";
 import Bar from "./widgets/bar/Bar";
 import Calendar from "./widgets/bar/Calendar";
 import Launcher from "./widgets/launcher/Launcher";
@@ -7,6 +6,7 @@ import NotificationPopups from "./widgets/notifications/NotificationPopups";
 import OSD from "./widgets/osd/OSD";
 import PowerMenu from "./widgets/powermenu/PowerMenu";
 import SysMenu from "./widgets/sysmenu/SysMenu";
+import { CSS_OUTPUT, generateColorScheme, generateCSS } from "./utils/styles";
 
 function mapMonitors(widget: (monitor: Gdk.Monitor) => Gtk.Widget) {
     const widgets = new Map<Gdk.Monitor, Gtk.Widget>();
@@ -25,8 +25,11 @@ function mapMonitors(widget: (monitor: Gdk.Monitor) => Gtk.Widget) {
     });
 }
 
+generateColorScheme();
+generateCSS();
+
 App.start({
-    css: style,
+    css: CSS_OUTPUT,
     // gtkTheme: "Adwaita-dark",
     main() {
         mapMonitors(Bar);

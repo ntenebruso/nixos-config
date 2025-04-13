@@ -41,6 +41,9 @@
 
       # GPG
       ./../common/optional/gpg.nix
+
+      # Weylus
+      ./../common/optional/weylus.nix
     ];
 
   # Bootloader.

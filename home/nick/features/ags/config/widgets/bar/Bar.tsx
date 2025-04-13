@@ -290,7 +290,7 @@ function CPUTemp() {
     return (
         <box className="CPUTemp item">
             <label className="icon"></label>
-            <label>{bind(indicators, "cpu_temp").as((t) => `${t}°C`)}</label>
+            <label>{bind(indicators, "cpuTemp").as((t) => `${t}°C`)}</label>
         </box>
     );
 }
@@ -301,7 +301,7 @@ function MemUsage() {
     return (
         <box className="MemUsage item">
             <label className="icon">󰍛</label>
-            <label>{bind(indicators, "mem_usage").as((m) => `${m}%`)}</label>
+            <label>{bind(indicators, "memUsage").as((m) => `${m}%`)}</label>
         </box>
     );
 }

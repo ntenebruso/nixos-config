@@ -6,8 +6,8 @@ $radius: 7px;
 window.Bar {
     border: none;
     box-shadow: none;
-    background-color: vars.$bg;
-    color: vars.$fg;
+    background-color: vars.$base00;
+    color: vars.$base05;
     font-size: 1.1em;
     font-weight: bold;
 
@@ -18,7 +18,7 @@ window.Bar {
     .item {
         padding: 0 10px;
         border-radius: $radius;
-        background: vars.$bg-accent;
+        background: vars.$base01;
     }
 
     .SysMenu {
@@ -27,12 +27,12 @@ window.Bar {
         min-width: 17px;
 
         label {
-            color: vars.$green;
+            color: vars.$base0B;
             font-size: 1.2em;
         }
 
         label.dnd {
-            color: vars.$orange;
+            color: vars.$base09;
         }
     }
 
@@ -42,12 +42,12 @@ window.Bar {
             background-color: transparent;
 
             &:hover label {
-                background-color: color.adjust(vars.$fg, $alpha: -0.84);
-                border-color: color.adjust(vars.$green, $alpha: -0.8);
+                background-color: color.adjust(vars.$base05, $alpha: -0.84);
+                border-color: color.adjust(vars.$base0B, $alpha: -0.8);
             }
 
             &:active label {
-                background-color: color.adjust(vars.$fg, $alpha: -0.8);
+                background-color: color.adjust(vars.$base05, $alpha: -0.8);
             }
         }
 
@@ -60,12 +60,12 @@ window.Bar {
         }
 
         .focused label {
-            color: vars.$green;
+            color: vars.$base0B;
         }
     }
 
     .Time {
-        color: vars.$aqua;
+        color: vars.$base0C;
     }
 
     .IdleInhibitor {
@@ -75,7 +75,7 @@ window.Bar {
 
         button {
             all: unset;
-            color: vars.$green;
+            color: vars.$base0B;
             font-size: 1.1em;
         }
     }
@@ -85,7 +85,7 @@ window.Bar {
 
         .icon {
             margin-right: 5px;
-            color: vars.$green;
+            color: vars.$base0B;
             font-size: 1.1em;
         }
     }
@@ -95,7 +95,7 @@ window.Bar {
 
         .icon {
             margin-right: 5px;
-            color: vars.$green;
+            color: vars.$base0B;
             font-size: 1.1em;
         }
     }
@@ -110,7 +110,7 @@ window.Bar {
     }
 
     .FocusedClient {
-        color: vars.$green;
+        color: vars.$base0B;
     }
 
     .Media .Cover {
@@ -125,7 +125,7 @@ window.Bar {
         margin-right: 5px;
 
         icon {
-            color: vars.$green;
+            color: vars.$base0B;
         }
 
         label {
@@ -137,7 +137,7 @@ window.Bar {
         margin-right: 10px;
 
         icon {
-            color: vars.$green;
+            color: vars.$base0B;
         }
 
         label {
@@ -154,7 +154,7 @@ window.Bar {
 
         icon {
             margin-right: 5px;
-            color: vars.$green;
+            color: vars.$base0B;
         }
 
         label {
@@ -162,18 +162,18 @@ window.Bar {
         }
 
         trough {
-            background-color: color.adjust(vars.$fg, $alpha: -0.8);
+            background-color: color.adjust(vars.$base05, $alpha: -0.8);
             border-radius: $radius;
         }
 
         highlight {
-            background-color: vars.$green;
+            background-color: vars.$base0B;
             min-height: 10px;
             border-radius: $radius;
         }
 
         slider {
-            background-color: vars.$fg;
+            background-color: vars.$base05;
             border-radius: 2px;
             min-height: 15px;
             min-width: 10px;

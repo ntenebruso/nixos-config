@@ -9,8 +9,8 @@ window.Launcher {
     all: unset;
 
     box.Applauncher {
-        background-color: vars.$bg;
-        color: vars.$fg;
+        background-color: vars.$base00;
+        color: vars.$base05;
         border-radius: 10px;
         margin: 10px;
         padding: 10px;
@@ -19,14 +19,14 @@ window.Launcher {
         entry {
             margin-bottom: 5px;
             border: none;
-            background: vars.$bg-accent;
+            background: vars.$base01;
             border: 2px solid transparent;
-            color: vars.$fg;
+            color: vars.$base05;
         }
 
         entry:focus {
             box-shadow: none;
-            border: 2px solid vars.$green;
+            border: 2px solid vars.$base0B;
         }
 
         button {
@@ -44,7 +44,7 @@ window.Launcher {
             }
 
             label.description {
-                color: gtkalpha(vars.$fg, 0.8);
+                color: gtkalpha(vars.$base05, 0.8);
             }
         }
 
@@ -53,11 +53,11 @@ window.Launcher {
 
             icon {
                 font-size: 6em;
-                color: gtkalpha(vars.$fg, 0.7);
+                color: gtkalpha(vars.$base05, 0.7);
             }
 
             label {
-                color: gtkalpha(vars.$fg, 0.9);
+                color: gtkalpha(vars.$base05, 0.9);
                 font-size: 1.2em;
             }
         }

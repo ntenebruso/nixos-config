@@ -4,9 +4,9 @@
 window.SysMenu {
     box.container {
         min-width: 500px;
-        background: vars.$bg;
-        color: vars.$fg;
-        border: 2px solid vars.$green;
+        background: vars.$base00;
+        color: vars.$base05;
+        border: 2px solid vars.$base0B;
         padding: 5px;
         border-radius: 10px;
 
@@ -17,7 +17,7 @@ window.SysMenu {
                 all: unset;
                 margin-right: 10px;
                 font-size: 1.2em;
-                color: vars.$green;
+                color: vars.$base0B;
             }
         }
 
@@ -33,7 +33,7 @@ window.SysMenu {
         }
 
         label.none {
-            color: color.adjust(vars.$fg, $alpha: -0.4);
+            color: color.adjust(vars.$base05, $alpha: -0.4);
         }
 
         box.Notifications {
@@ -42,7 +42,7 @@ window.SysMenu {
         box.Media {
             box.player {
                 padding: 10px;
-                border: 2px solid vars.$aqua;
+                border: 2px solid vars.$base0C;
                 border-radius: 10px;
 
                 label.song {
@@ -57,7 +57,7 @@ window.SysMenu {
                         margin: 0 5px;
 
                         block.filled {
-                            background: vars.$green;
+                            background: vars.$base0B;
                             border: none;
                         }
                     }

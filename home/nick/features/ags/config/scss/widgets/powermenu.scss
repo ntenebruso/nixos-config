@@ -2,8 +2,8 @@
 
 window.PowerMenu {
     box.container {
-        background: vars.$bg;
-        color: vars.$fg;
+        background: vars.$base00;
+        color: vars.$base05;
         padding: 10px 0;
         border-radius: 10px;
 
@@ -14,14 +14,14 @@ window.PowerMenu {
         }
 
         button:focus {
-            border: 2px solid vars.$green;
+            border: 2px solid vars.$base0B;
             box-shadow: none;
             outline: none;
         }
 
         button .icon {
             font-family: "Mononoki Nerd Font Mono";
-            color: vars.$green;
+            color: vars.$base0B;
             font-size: 3rem;
         }
     }

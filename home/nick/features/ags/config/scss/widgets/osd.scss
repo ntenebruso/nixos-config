@@ -3,8 +3,8 @@
 window.OSD {
     box.OSD {
         border-radius: 10px;
-        background-color: vars.$bg;
-        color: vars.$fg;
+        background-color: vars.$base00;
+        color: vars.$base05;
         padding: 13px 16px;
         margin: 13px;
     }
@@ -27,13 +27,13 @@ window.OSD {
 
         block.filled {
             border: none;
-            background: vars.$green;
+            background: vars.$base0B;
         }
 
         block {
             border-radius: 10px;
             margin: 3px 0;
-            background: vars.$bg-accent;
+            background: vars.$base01;
             border: none;
         }
     }
