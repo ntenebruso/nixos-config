@@ -15,7 +15,7 @@
     ./../../wallpapers
     ./../../programs/alacritty
     ./../../themes
-    ./../../ags
+    ./../../neoshell
   ];
 
   wayland.windowManager.hyprland = {
@@ -27,7 +27,26 @@
     extraConfig = builtins.readFile ./hyprland.conf;
     systemd = {
       enable = false;
-      #variables = [ "--all" ];
+    };
+  };
+
+  xdg.mimeApps = {
+    enable = true;
+
+    defaultApplications = {
+      # Firefox
+      "text/html" = [ "firefox.desktop" ];
+      "x-scheme-handler/http" = [ "firefox.desktop" ];
+      "x-scheme-handler/https" = [ "firefox.desktop" ];
+
+      # Thunderbird
+      "message/rfc822" = [ "thunderbird.desktop" ];
+      "x-scheme-handler/mailto" = [ "thunderbird.desktop" ];
+      "text/calendar" = [ "thunderbird.desktop" ];
+      "text/x-vcard" = [ "thunderbird.desktop" ];
+
+      # pcmanfm
+      "inode/directory" = [ "pcmanfm.desktop" ];
     };
   };
 
