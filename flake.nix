@@ -20,14 +20,9 @@
       inputs.home-manager.follows = "home-manager";
     };
 
-    ags.url = "github:aylur/ags";
+    neoshell.url = "git+file:///home/nick/code/neoshell";
 
     stylix.url = "github:danth/stylix";
-
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = { nixpkgs, home-manager, ... }@inputs:
@@ -46,9 +41,9 @@
           inherit pkgs;
           extraSpecialArgs = { inherit inputs; };
           modules = [
-            inputs.nixvim.homeManagerModules.nixvim
             inputs.plasma-manager.homeManagerModules.plasma-manager
             inputs.stylix.homeManagerModules.stylix
+            inputs.neoshell.homeManagerModules.neoshell
             ./home/nick/ntthinkpad.nix
           ];
         };
