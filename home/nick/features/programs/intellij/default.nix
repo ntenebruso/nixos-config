@@ -12,11 +12,11 @@
     jetbrains.idea-ultimate
   ];
 
-  nixpkgs.overlays = [
-    (final: prev: {
-      lldb = prev.lldb.overrideAttrs {
-       dontCheckForBrokenSymlinks = true;
-      };
-    })
-  ];
+#  nixpkgs.overlays = [
+#    (final: prev: {
+#      lldb = prev.lldb.overrideAttrs {
+#       dontCheckForBrokenSymlinks = true;
+#      };
+#    })
+#  ];
 }

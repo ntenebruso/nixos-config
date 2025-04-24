@@ -335,11 +335,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1744678088,
-        "narHash": "sha256-mAN4U5wOSXh0PVrCfvQHnLlRQHs/JQHdq9MZLDHVo2U=",
+        "lastModified": 1745530701,
+        "narHash": "sha256-s3+iyI/1owO+xUsMCKv2yWInsByQaIPG024UTb2JHfs=",
         "ref": "refs/heads/master",
-        "rev": "3c8de30ef6b7e27936105beaa31972a5debc0120",
-        "revCount": 4,
+        "rev": "0f6746c58e26d84bb69d1c2432bc8aecbb05d063",
+        "revCount": 5,
         "type": "git",
         "url": "file:///home/nick/code/neoshell"
       },
