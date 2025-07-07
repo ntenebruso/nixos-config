@@ -34,7 +34,7 @@
       path = "${config.xdg.dataHome}/zsh/history";
     };
 
-    initExtra = ''
+    initContent = ''
       eval "$(starship init zsh)"
     '';
   };
