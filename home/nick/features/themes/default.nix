@@ -49,7 +49,7 @@
       name = "Vanilla-DMZ";
     };
 
-    iconTheme = {
+    icons = {
       enable = true;
       package = pkgs.adwaita-icon-theme;
       dark = "Adwaita";

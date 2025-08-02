@@ -91,6 +91,9 @@
     # Additional Fonts
     nerd-fonts.mononoki
 
+    # Redlight Filter
+    hyprsunset
+
     networkmanagerapplet
   ];
 
