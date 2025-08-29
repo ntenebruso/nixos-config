@@ -50,6 +50,19 @@
     };
   };
 
+  # FIX FOR NWG BUILD ISSUE
+  nixpkgs.overlays = [
+    (final: prev: {
+      pythonPackagesExtensions = prev.pythonPackagesExtensions ++ [
+         (python-final: python-prev: {
+           i3ipc = python-prev.i3ipc.overridePythonAttrs (oldAttrs: {
+             doCheck = false;
+             });
+          })
+      ];
+     })
+  ];
+
   home.packages = with pkgs; [
     # Display editor
     nwg-displays
