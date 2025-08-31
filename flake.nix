@@ -42,7 +42,7 @@
           extraSpecialArgs = { inherit inputs; };
           modules = [
             inputs.plasma-manager.homeManagerModules.plasma-manager
-            inputs.stylix.homeManagerModules.stylix
+            inputs.stylix.homeModules.stylix
             inputs.neoshell.homeManagerModules.neoshell
             ./home/nick/ntthinkpad.nix
           ];

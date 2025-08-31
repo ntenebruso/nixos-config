@@ -56,8 +56,8 @@
   networking.firewall.checkReversePath = false;
 
   # Power key
-  services.logind.powerKey = "suspend";
-  services.logind.powerKeyLongPress = "poweroff";
+  services.logind.settings.Login.HandlePowerKey = "suspend";
+  services.logind.settings.Login.HandlePowerKeyLongPress = "poweroff";
 
   # TLP settings
   services.tlp.settings = {
