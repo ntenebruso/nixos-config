@@ -20,7 +20,7 @@
       inputs.home-manager.follows = "home-manager";
     };
 
-    neoshell.url = "git+file:///home/nick/code/neoshell";
+    neoshell.url = "github:ntenebruso/NeoShell";
 
     stylix.url = "github:danth/stylix";
   };
