@@ -251,17 +251,17 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1756679123,
-        "narHash": "sha256-972mg7EHCHVcRmNxM6+ZwLwLgF+xQ2cDGyG5SgX9P2g=",
-        "owner": "ntenebruso",
-        "repo": "NeoShell",
-        "rev": "b1f77b150ed2c0c0422cbe62b88ae1c7628e15a5",
-        "type": "github"
+        "lastModified": 1757456126,
+        "narHash": "sha256-9yrdBJ14B7gJ3Y5CDKEF3f26A8YB2AdQYXad/wa8hhk=",
+        "ref": "refs/heads/master",
+        "rev": "bb2cf25008c90ef6518a401675a8d0949b1a0448",
+        "revCount": 26,
+        "type": "git",
+        "url": "file:///home/nick/code/neoshell"
       },
       "original": {
-        "owner": "ntenebruso",
-        "repo": "NeoShell",
-        "type": "github"
+        "type": "git",
+        "url": "file:///home/nick/code/neoshell"
       }
     },
     "nixpkgs": {

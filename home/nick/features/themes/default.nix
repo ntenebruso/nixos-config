@@ -18,8 +18,8 @@
 
   stylix = {
     enable = true;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
-    image = ../wallpapers/pictures/forest.jpg;
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+    image = ../wallpapers/pictures/blackhole.png;
     polarity = "dark";
 
     fonts = {
@@ -58,11 +58,6 @@
     };
 
     targets.neovim.enable = false;
-
-    targets.gtk.extraCss = ''
-      @define-color accent_color #${config.lib.stylix.colors.base0B};
-      @define-color accent_bg_color #${config.lib.stylix.colors.base0B};
-    '';
   };
 
   qt = {

@@ -11,6 +11,7 @@
     ./features/groups/productivity.nix
     ./features/programs/intellij
     ./features/programs/neovim
+    ./features/programs/tmux
   ];
 
   home.stateVersion = "24.05";
