@@ -43,7 +43,7 @@
       "text/x-vcard" = [ "thunderbird.desktop" ];
 
       # pcmanfm
-      "inode/directory" = [ "pcmanfm.desktop" ];
+      "inode/directory" = [ "nautilus.desktop" ];
     };
   };
 
@@ -78,19 +78,19 @@
     fastfetch
 
     # File manager
-    pcmanfm
+    nautilus
 
     # Image viewer
-    kdePackages.gwenview
+    loupe
 
     # Archive manager
     kdePackages.ark
 
     # PDF viewer
-    kdePackages.okular
+    evince
 
     # Calculator
-    kdePackages.kcalc
+    gnome-calculator
 
     # Clipboard support
     wl-clipboard
