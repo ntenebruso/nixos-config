@@ -27,6 +27,13 @@
     };
   };
 
+  gtk.gtk3.bookmarks = [
+    "file:///home/nick/Documents"
+    "file:///home/nick/Downloads"
+    "file:///home/nick/Pictures"
+    "file:///home/nick/Videos"
+  ];
+
   xdg.mimeApps = {
     enable = true;
 
