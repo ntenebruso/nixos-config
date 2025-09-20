@@ -20,12 +20,13 @@
         bitwarden
         tabliss
       ];
+      extensions.force = true;
       extraConfig = builtins.readFile ./user.js;
     };
   };
 
   stylix.targets.firefox = {
     profileNames = [ "nick" ];
-    firefoxGnomeTheme.enable = true;
+    colorTheme.enable = true;
   };
 }
