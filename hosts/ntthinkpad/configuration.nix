@@ -43,7 +43,8 @@
       ./../common/optional/gpg.nix
 
       # Weylus
-      ./../common/optional/weylus.nix
+      # commenting until build problems fixed
+      # ./../common/optional/weylus.nix
     ];
 
   # Bootloader.
