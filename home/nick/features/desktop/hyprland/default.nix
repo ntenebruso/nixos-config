@@ -27,6 +27,9 @@
     };
   };
 
+  # Ozone for chromium apps
+  home.sessionVariables.NIXOS_OZONE_WL = "1";
+
   gtk.gtk3.bookmarks = [
     "file:///home/nick/Documents"
     "file:///home/nick/Downloads"
