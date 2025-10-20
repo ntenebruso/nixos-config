@@ -42,6 +42,9 @@
       # GPG
       ./../common/optional/gpg.nix
 
+      # Fingerprint sensor
+      ./../common/optional/fingerprint.nix
+
       # Weylus
       # commenting until build problems fixed
       # ./../common/optional/weylus.nix

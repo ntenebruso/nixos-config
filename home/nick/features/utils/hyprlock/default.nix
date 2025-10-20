@@ -10,6 +10,10 @@
     enable = true;
 
     settings = {
+      auth = {
+        "fingerprint:enabled" = true;
+      };
+
       label = {
         text = "$TIME12";
         font_size = 102;
