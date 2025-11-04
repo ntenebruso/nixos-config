@@ -8,12 +8,18 @@
 {
   # Fonts
   fonts.fontconfig.enable = true;
+
   home.packages = with pkgs; [
     noto-fonts
     noto-fonts-cjk-sans
     noto-fonts-cjk-serif
+    noto-fonts-color-emoji
+    ubuntu-sans
+    dejavu_fonts
+    nerd-fonts.mononoki
     corefonts
     adwaita-icon-theme
+    gnome-themes-extra
   ];
 
   stylix = {

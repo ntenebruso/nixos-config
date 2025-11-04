@@ -47,7 +47,7 @@
 
       # Weylus
       # commenting until build problems fixed
-      # ./../common/optional/weylus.nix
+      ./../common/optional/weylus.nix
     ];
 
   # Bootloader.

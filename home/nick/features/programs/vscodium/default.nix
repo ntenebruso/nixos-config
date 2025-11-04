@@ -33,6 +33,9 @@
         # LaTeX
         james-yu.latex-workshop
 
+        # Rust
+        rust-lang.rust-analyzer
+
         # Direnv
         mkhl.direnv
       ];
@@ -41,6 +44,9 @@
         "editor.formatOnSave" = true;
         "workbench.iconTheme" = "material-icon-theme";
         "editor.defaultFormatter" = "esbenp.prettier-vscode";
+        "[rust]" = {
+          "editor.defaultFormatter" = "rust-lang.rust-analyzer";
+        };
       };
     };
   };
