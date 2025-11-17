@@ -13,7 +13,8 @@
     ./../../utils/hypridle
     #./../../utils/dunst
     ./../../wallpapers
-    ./../../programs/alacritty
+    #./../../programs/alacritty
+    ./../../programs/kitty
     ./../../themes
     ./../../neoshell
   ];
