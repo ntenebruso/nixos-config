@@ -27,4 +27,14 @@
       color-scheme = "prefer-dark";
     };
   };
+
+  gtk = {
+    gtk3 = {
+      enable = true;
+      theme = {
+        name = "adw-gtk3-dark";
+        package = pkgs.adw-gtk3;
+      };
+    };
+  };
 }

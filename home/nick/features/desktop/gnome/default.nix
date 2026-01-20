@@ -26,9 +26,16 @@
         pkgs.gnomeExtensions.appindicator.extensionUuid
         pkgs.gnomeExtensions.blur-my-shell.extensionUuid
         pkgs.gnomeExtensions.caffeine.extensionUuid
-        #pkgs.gnomeExtensions.paperwm.extensionUuid
+        pkgs.gnomeExtensions.forge.extensionUuid
         pkgs.gnomeExtensions.dash-to-dock.extensionUuid
         "user-theme@gnome-shell-extensions.gcampax.github.com"
+      ];
+      favorite-apps = [
+        "firefox.desktop"
+        "org.gnome.Calendar.desktop"
+        "org.gnome.Music.desktop"
+        "org.gnome.TextEditor.desktop"
+        "org.gnome.Nautilus.desktop"
       ];
     };
     # "org/gnome/shell/extensions/user-theme" = {
@@ -60,7 +67,7 @@
     gnomeExtensions.appindicator
     gnomeExtensions.blur-my-shell
     gnomeExtensions.caffeine
-    #gnomeExtensions.paperwm
+    gnomeExtensions.forge
     gnomeExtensions.dash-to-dock
   ];
 }
