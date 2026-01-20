@@ -22,10 +22,10 @@
       ./../common/optional/tlp.nix
 
       # Hyprland
-      ./../common/optional/hyprland.nix
+      # ./../common/optional/hyprland.nix
 
       # GNOME
-      # ./../common/optional/gnome.nix
+      ./../common/optional/gnome.nix
 
       # KDE
       #./../common/optional/kde.nix
@@ -59,9 +59,14 @@
   networking.firewall.enable = true;
   networking.firewall.checkReversePath = false;
 
-  # Power key
-  services.logind.settings.Login.HandlePowerKey = "suspend";
-  services.logind.settings.Login.HandlePowerKeyLongPress = "poweroff";
+  # Power key and lid
+  services.logind.settings.Login = {
+    HandlePowerKey = "suspend";
+    HandlePowerKeyLongPress = "poweroff";
+    HandleLidSwitch = "suspend";
+    HandleLidSwitchExternalPower = "suspend";
+    HandleLidSwitchDocked = "ignore";
+  };
 
   # TLP settings
   services.tlp.settings = {

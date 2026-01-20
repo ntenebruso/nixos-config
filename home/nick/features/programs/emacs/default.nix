@@ -6,6 +6,12 @@
 }:
 
 {
-  programs.emacs.enable = true;
+#  services.emacs = {
+#    enable = true;
+#    package = pkgs.emacs-pgtk;
+#  };
+  home.packages = with pkgs; [
+    emacs-pgtk
+  ];
 }
 

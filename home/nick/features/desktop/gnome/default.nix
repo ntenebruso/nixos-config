@@ -6,9 +6,13 @@
 }:
 
 {
+  imports = [
+    ./theme.nix
+  ];
+
   dconf.settings = {
     "org/gnome/mutter" = {
-      experimental-features = [ "scale-monitor-framebuffer" ];
+      experimental-features = [ "scale-monitor-framebuffer" "xwayland-native-scaling" ];
     };
     "org/gnome/desktop/wm/preferences" = {
       button-layout = "appmenu:minimize,maximize,close";
@@ -22,14 +26,14 @@
         pkgs.gnomeExtensions.appindicator.extensionUuid
         pkgs.gnomeExtensions.blur-my-shell.extensionUuid
         pkgs.gnomeExtensions.caffeine.extensionUuid
-        pkgs.gnomeExtensions.paperwm.extensionUuid
+        #pkgs.gnomeExtensions.paperwm.extensionUuid
         pkgs.gnomeExtensions.dash-to-dock.extensionUuid
         "user-theme@gnome-shell-extensions.gcampax.github.com"
       ];
     };
-    "org/gnome/shell/extensions/user-theme" = {
-      name = "Gruvbox-Green-Dark";
-    };
+    # "org/gnome/shell/extensions/user-theme" = {
+    #   name = "Gruvbox-Green-Dark";
+    # };
     "org/gnome/desktop/sound" = {
       event-sounds = false;
     };
@@ -56,7 +60,7 @@
     gnomeExtensions.appindicator
     gnomeExtensions.blur-my-shell
     gnomeExtensions.caffeine
-    gnomeExtensions.paperwm
+    #gnomeExtensions.paperwm
     gnomeExtensions.dash-to-dock
   ];
 }
