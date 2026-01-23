@@ -29,6 +29,8 @@
   };
 
   gtk = {
+    enable = true;
+
     gtk3 = {
       enable = true;
       theme = {
@@ -36,5 +38,9 @@
         package = pkgs.adw-gtk3;
       };
     };
+  };
+
+  programs.ghostty.settings = {
+    theme = "Kitty Default";
   };
 }
