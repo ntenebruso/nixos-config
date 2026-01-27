@@ -33,6 +33,8 @@
     };
     "org/gnome/desktop/wm/keybindings" = {
       close = [ "<Super>w" ];
+      maximize = [ "<Super>Tab" ];
+      switch-windows = [ "<Alt>Tab" ];
     };
     "org/gnome/desktop/wm/preferences" = {
       button-layout = "appmenu:minimize,maximize,close";
@@ -54,8 +56,8 @@
         "firefox.desktop"
         "org.gnome.Calendar.desktop"
         "org.gnome.Music.desktop"
-        "org.gnome.TextEditor.desktop"
         "org.gnome.Nautilus.desktop"
+        "com.mitchellh.ghostty.desktop"
       ];
     };
     "org/gnome/desktop/sound" = {
@@ -69,6 +71,9 @@
     };
     "org/gnome/shell/extensions/paperwm" = {
       show-window-position-bar = false;
+    };
+    "org/gnome/shell/extensions/caffeine" = {
+      toggle-shortcut = [ "<Super>c" ];
     };
     "org/gnome/Console" = {
       custom-font = "JetBrainsMono Nerd Font 10 Mono";

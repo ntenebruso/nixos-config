@@ -19,6 +19,7 @@
         ublock-origin
         bitwarden
         tabliss
+        tridactyl
       ];
       extensions.force = true;
       extraConfig = builtins.readFile ./user.js;
