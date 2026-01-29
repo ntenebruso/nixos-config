@@ -9,6 +9,8 @@
   home.packages = with pkgs; [
     noto-fonts-color-emoji
     nerd-fonts.jetbrains-mono
+    corefonts
+    vista-fonts
   ];
 
   fonts = {

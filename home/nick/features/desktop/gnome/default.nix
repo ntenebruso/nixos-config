@@ -5,9 +5,13 @@
   ...
 }:
 
+let
+  flameshot-gui = pkgs.writeShellScriptBin "flameshot-gui" "${pkgs.flameshot}/bin/flameshot gui";
+in 
 {
   imports = [
     ./theme.nix
+    ../../utils/flameshot
     ../../programs/ghostty
   ];
 
@@ -25,6 +29,7 @@
     gnomeExtensions.caffeine
     gnomeExtensions.forge
     gnomeExtensions.dash-to-dock
+    gnomeExtensions.gsconnect
   ];
 
   dconf.settings = {
@@ -50,6 +55,7 @@
         pkgs.gnomeExtensions.caffeine.extensionUuid
         #pkgs.gnomeExtensions.forge.extensionUuid
         pkgs.gnomeExtensions.dash-to-dock.extensionUuid
+        pkgs.gnomeExtensions.gsconnect.extensionUuid
         "user-theme@gnome-shell-extensions.gcampax.github.com"
       ];
       favorite-apps = [
@@ -82,12 +88,20 @@
     # CUSTOM KEYBINDINGS
     "org/gnome/settings-daemon/plugins/media-keys" = {
       www = [ "<Super>b" ];
-      custom-keybindings = [ "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/" ];
+      custom-keybindings = [
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
+        "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1/"
+      ];
     };
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
       binding = "<Super>t";
       command = "ghostty";
       name = "terminal";
+    };
+    "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
+      binding = "<Super><Shift>s";
+      command = "${flameshot-gui}/bin/flameshot-gui";
+      name = "flameshot";
     };
   };
 
