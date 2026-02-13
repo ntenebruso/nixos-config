@@ -15,18 +15,18 @@
         offset = "30x50";
         origin = "top-right";
         corner_radius = 10;
-        font = "Mononoki Nerd Font";
+        font = "JetBrainsMono Nerd Font";
         follow = "mouse";
 
-        background = "#282828";
-        foreground = "#d5c4a1";
-        highlight = "#98971a";
-        frame_color = "#d5c4a1";
+        background = "#272822";
+        foreground = "#f8f8f2";
+        highlight = "#a6e22e";
+        frame_color = "#383830";
         timeout = 10;
       };
       urgency_critical = {
-        frame_color = "#cc241d";
-        foreground = "#cc241d";
+        frame_color = "#f92672";
+        foreground = "#f92672";
       };
     };
   };

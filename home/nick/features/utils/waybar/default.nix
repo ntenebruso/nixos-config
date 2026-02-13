@@ -19,9 +19,29 @@
       mainBar = {
         layer = "top";
         spacing = 4;
-        modules-left = [ "hyprland/workspaces" "mpris" ];
+        modules-left = [ "sway/workspaces" "mpris" ];
         modules-center = [ "clock" ];
-        modules-right = [ "idle_inhibitor" "pulseaudio" "cpu" "memory" "temperature" "backlight" "battery" "tray" ];
+        modules-right = [
+          "idle_inhibitor"
+          "custom/separator"
+          "pulseaudio"
+          "custom/separator"
+          "memory"
+          "custom/separator"
+          "temperature"
+          "custom/separator"
+          "backlight"
+          "custom/separator"
+          "battery"
+          "custom/separator"
+          "tray"
+        ];
+
+        "custom/separator" = {
+          format = "|";
+          interval = "once";
+          tooltip = false;
+        };
 
         # MPRIS
         mpris = {
@@ -41,10 +61,10 @@
 
         # Idle Inhibitor
         idle_inhibitor = {
-          format = "<span color='#b8bb26'>{icon}</span>";
+          format = "{icon}";
           format-icons = {
-            activated = " ";
-            deactivated = " ";
+            activated = "󰒳 ";
+            deactivated = "󰒲 ";
           };
         };
 
@@ -64,13 +84,13 @@
 
         # CPU usage indicator
         cpu = {
-          format = "<span color='#b8bb26'> </span> {usage}%";
+          format = "cpu {usage}%";
           tooltip = false;
         };
 
         # Memory usage indicator
         memory = {
-          format = "<span color='#b8bb26'> </span> {}%";
+          format = "mem {}%";
         };
 
         # Temperature monitor
@@ -79,13 +99,13 @@
           # hwmon-path = "/sys/class/hwmon/hwmon2/temp1_input";
           critical-threshold = 80;
           # format-critical = "{temperatureC}°C {icon}";
-          format = "<span color='#b8bb26'>{icon}</span> {temperatureC}°C";
+          format = "temp {temperatureC}°C";
           format-icons = ["" "" ""];
         };
 
         backlight = {
           # device = "acpi_video1";  # This line is commented out
-          format = "<span color='#b8bb26'>{icon}</span> {percent}%";
+          format = "  {percent}%";
           format-icons = ["󰃞 " "󰃟 " "󰃠 "];
         };
 
@@ -96,10 +116,10 @@
             warning = 20;
             critical = 10;
           };
-          format = "<span color='#b8bb26'>{icon}</span> {capacity}%";
-          format-critical = "<span color='#cc241d'>󰂃</span> {capacity}%";
-          format-charging = "<span color='#b8bb26'>󰂄</span> {capacity}%";
-          format-plugged = "<span color='#b8bb26'></span> {capacity}%";
+          format = "{icon} {capacity}%";
+#          format-critical = "<span color='#cc241d'>󰂃</span> {capacity}%";
+          format-charging = "󰂄 {capacity}%";
+          format-plugged = "  {capacity}%";
           format-alt = "{icon} {time}";
           # format-good = "";  # An empty format will hide the module
           # format-full = "";  # This line is commented out
@@ -120,19 +140,17 @@
         # Audio indicator
         pulseaudio = {
           # scroll-step = 1;  # %, can be a float
-          format = "<span color='#b8bb26'>{icon}</span> {volume}% {format_source}";
-          format-bluetooth = "<span color='#b8bb26'>{icon}</span> {volume}% {format_source}";
-          format-bluetooth-muted = "<span color='#b8bb26'>{icon}</span>   {format_source}";
-          format-muted = "<span color='#b8bb26'> </span> {format_source}";
-          format-source = "<span color='#b8bb26'></span> {volume}%";
-          format-source-muted = "<span color='#b8bb26'> </span>";
+          format = "{icon} {volume}%";
+#          format = "VOL: {volume}%";
+#          format-bluetooth = "<span color='#b8bb26'>{icon}</span> {volume}% {format_source}";
+#          format-bluetooth-muted = "<span color='#b8bb26'>{icon}</span>   {format_source}";
+          format-muted = "  {volume}%";
+#          format-source = "<span color='#b8bb26'></span> {volume}%";
+#          format-source-muted = "<span color='#b8bb26'> </span>";
           format-icons = {
             headphone = " ";
-            hands-free = " ";
-            headset = " ";
             phone = " ";
             portable = " ";
-            car = " ";
             default = [" " " " " "];
           };
           on-click = "pavucontrol";

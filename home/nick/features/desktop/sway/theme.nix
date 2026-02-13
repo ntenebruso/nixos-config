@@ -28,9 +28,17 @@
 
   dconf.settings = {
     "org/gnome/desktop/interface" = {
-      accent-color = "green";
       color-scheme = "prefer-dark";
     };
+  };
+
+  home.pointerCursor = {
+    enable = true;
+    size = 24;
+    package = pkgs.vanilla-dmz;
+    name = "Vanilla-DMZ";
+    gtk.enable = true;
+    x11.enable = true;
   };
 
   gtk = {
@@ -42,6 +50,16 @@
         name = "adw-gtk3-dark";
         package = pkgs.adw-gtk3;
       };
+    };
+
+    iconTheme = {
+      package = pkgs.adwaita-icon-theme;
+      name = "Adwaita";
+    };
+
+    font = {
+      package = pkgs.adwaita-fonts;
+      name = "Adwaita Sans";
     };
   };
 

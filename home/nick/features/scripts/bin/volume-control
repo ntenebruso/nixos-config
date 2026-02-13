@@ -12,11 +12,11 @@ function send_notification() {
 case $1 in
   up)
     wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+ -l 1.0
-    #send_notification
+    send_notification
     ;;
   down)
     wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-
-    #send_notification
+    send_notification
     ;;
   mute)
     wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle

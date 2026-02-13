@@ -6,12 +6,13 @@
 }:
 
 let
-  flameshot-gui = pkgs.writeShellScriptBin "flameshot-gui" "${pkgs.flameshot}/bin/flameshot gui";
+  screenshot = pkgs.writeShellScriptBin "screenshot" ''
+    grim -g "$(slurp)" - | swappy -f -
+  '';
 in 
 {
   imports = [
     ./theme.nix
-    ../../utils/flameshot
     ../../programs/ghostty
   ];
 
@@ -22,6 +23,11 @@ in
     gnome-tweaks
     dconf-editor
     vlc
+
+    # Screenshotting
+    grim
+    slurp
+    swappy
 
     # Gnome Extensions
     gnomeExtensions.appindicator
@@ -100,7 +106,7 @@ in
     };
     "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom1" = {
       binding = "<Super><Shift>s";
-      command = "${flameshot-gui}/bin/flameshot-gui";
+      command = "${screenshot}/bin/screenshot";
       name = "flameshot";
     };
   };
@@ -112,6 +118,21 @@ in
       "x-scheme-handler/http" = [ "firefox.desktop" ];
       "x-scheme-handler/https" = [ "firefox.desktop" ];
       "text/html" = [ "firefox.desktop" ];
+    };
+  };
+
+  gtk = {
+    enable = true;
+    gtk3 = {
+      enable = true;
+      bookmarks = [
+        "file:///home/nick/Documents"
+        "file:///home/nick/Documents/School"
+        "file:///home/nick/Downloads"
+        "file:///home/nick/Pictures"
+        "file:///home/nick/Music"
+        "file:///home/nick/Videos"
+      ];
     };
   };
 }

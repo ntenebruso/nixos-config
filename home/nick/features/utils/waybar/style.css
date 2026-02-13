@@ -1,27 +1,25 @@
-@define-color background #1d2021;
-@define-color foreground #ebdbb2;
-@define-color focused #3c3836;
-@define-color red #fb4934;
-@define-color orange #fe8019;
-@define-color yellow #fabd2f;
-@define-color green #b8bb26;
-@define-color purple #d3869b;
-@define-color blue #83a598;
-@define-color aqua #8ec07c;
+@define-color background #272822;
+@define-color foreground #f8f8f2;
+@define-color muted #75715e;
+@define-color red #f92672;
+@define-color orange #fd971f;
+@define-color yellow #f4bf75;
+@define-color green  #a6e22e;
+@define-color purple #ae81ff;
+@define-color blue #66d9ef;
 
 * {
     margin: 0;
     padding: 0;
     border: none;
     border-radius: 0;
-    font-family: "Mononoki Nerd Font"; 
-    font-size: 14px;
-    font-weight: bold;
-    min-height: 0;
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 15px;
+    min-height: 24px;
 }
 
 window#waybar {
-    background: transparent;
+    background: @background;
     color: @foreground;
 }
 
@@ -36,33 +34,24 @@ tooltip label {
 
 .modules-left {
   margin: 3px 0;
-  margin-left: 5px;
-  background: @focused;
-  border-radius: 100px;
+  margin-left: 10px;
 }
 
 .modules-right {
-  background: @focused;
-  border-radius: 100px;
-  padding: 0 15px;
   margin: 3px 0;
-  margin-right: 5px;
+  margin-right: 10px;
 }
 
 
 #workspaces {
-    padding: 0 8px;
-    border-radius: 100px;
-    background: @focused;
 }
 
 #workspaces button {
-    padding: 4px 5px;
-    background: transparent;
+    padding: 0 4px;
     color: @foreground;
 }
 
-#workspaces button.active {
+#workspaces button.focused {
     color: @green;
 }
 
@@ -74,8 +63,7 @@ tooltip label {
 
 #clock {
     margin: 3px 3px;
-    background: @focused;
-    color: @aqua;
+    color: @blue;
     padding: 0 12px;
     border-radius: 100px;
 }
@@ -89,12 +77,18 @@ tooltip label {
 #keyboard-state,
 #battery,
 #tray {
-    margin-left: 20px;
 }
 
 #battery.critical {
     color: @red;
 }
+
+#custom-separator {
+  font-weight: bold;
+  color: @muted;
+  margin: 0 4px;
+}
+
 
 /*
 #idle_inhibitor,

@@ -25,7 +25,10 @@
       # ./../common/optional/hyprland.nix
 
       # GNOME
-      ./../common/optional/gnome.nix
+      # ./../common/optional/gnome.nix
+
+      # Sway
+      ./../common/optional/sway.nix
 
       # KDE
       #./../common/optional/kde.nix
@@ -65,7 +68,7 @@
     HandlePowerKeyLongPress = "poweroff";
     HandleLidSwitch = "suspend";
     HandleLidSwitchExternalPower = "suspend";
-    HandleLidSwitchDocked = "ignore";
+    HandleLidSwitchDocked = "suspend";
   };
 
   # TLP settings
