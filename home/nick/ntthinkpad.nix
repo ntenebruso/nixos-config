@@ -5,9 +5,9 @@
 {
   imports = [
     ./global
-    # ./features/desktop/hyprland
+    ./features/desktop/hyprland
     # ./features/desktop/gnome
-    ./features/desktop/sway
+    # ./features/desktop/sway
     # ./features/desktop/kde
     ./features/groups/productivity.nix
     ./features/groups/school.nix

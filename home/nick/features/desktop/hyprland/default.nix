@@ -7,31 +7,31 @@
 
 {
   imports = [
-    ./../../utils/hyprpaper
-    #./../../utils/waybar
-    ./../../utils/hyprlock
     ./../../utils/hypridle
-    #./../../utils/dunst
     ./../../wallpapers
-    #./../../programs/alacritty
-    ./../../programs/kitty
-    ./../../themes
-    ./../../neoshell
+    ./../../programs/ghostty
+    ./themes.nix
+    ./../../utils/dms
+    ./../../programs/rofi
   ];
 
   wayland.windowManager.hyprland = {
     enable = true;
 
-    extraConfig = builtins.readFile ./hyprland.conf;
     systemd = {
       enable = false;
     };
+  };
+
+  xdg.configFile."hypr/hyprland.conf" = {
+    source = ./hyprland.conf;
   };
 
   # Ozone for chromium apps
   home.sessionVariables.NIXOS_OZONE_WL = "1";
 
   gtk.gtk3.bookmarks = [
+    "file:///home/nick/Documents/School"
     "file:///home/nick/Documents"
     "file:///home/nick/Downloads"
     "file:///home/nick/Pictures"
@@ -58,29 +58,9 @@
     };
   };
 
-  # FIX FOR NWG BUILD ISSUE
-  nixpkgs.overlays = [
-    (final: prev: {
-      pythonPackagesExtensions = prev.pythonPackagesExtensions ++ [
-         (python-final: python-prev: {
-           i3ipc = python-prev.i3ipc.overridePythonAttrs (oldAttrs: {
-             doCheck = false;
-             });
-          })
-      ];
-     })
-  ];
-
   home.packages = with pkgs; [
     # Display editor
     nwg-displays
-
-    # Polkit
-    lxqt.lxqt-policykit
-
-    # Screenshots
-    grim
-    slurp
 
     # Volume control
     pavucontrol
@@ -108,20 +88,5 @@
 
     # Media player
     vlc
-
-    # Additional Fonts
-    nerd-fonts.mononoki
-
-    # Redlight Filter
-    hyprsunset
-
-    networkmanagerapplet
   ];
-
-  services.network-manager-applet.enable = true;
-  services.blueman-applet.enable = true;
-
-  programs.rofi = {
-    enable = true;
-  };
 }

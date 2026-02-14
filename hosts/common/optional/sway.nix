@@ -8,7 +8,10 @@
 {
   security.polkit.enable = true;
 
-  programs.sway.enable = true;
+  programs.sway = {
+    enable = true;
+    package = pkgs.swayfx;
+  };
 
   security.pam.services.gtklock = { };
 

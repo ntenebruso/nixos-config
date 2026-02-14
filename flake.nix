@@ -23,6 +23,11 @@
     neoshell.url = "git+file:///home/nick/code/neoshell";
 
     stylix.url = "github:danth/stylix";
+
+    dms = {
+      url = "github:AvengeMedia/DankMaterialShell/stable";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = { nixpkgs, home-manager, ... }@inputs:
@@ -44,6 +49,7 @@
             inputs.plasma-manager.homeManagerModules.plasma-manager
             inputs.stylix.homeModules.stylix
             inputs.neoshell.homeManagerModules.neoshell
+            inputs.dms.homeModules.dank-material-shell
             ./home/nick/ntthinkpad.nix
           ];
         };

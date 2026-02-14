@@ -11,15 +11,16 @@
     ./../../programs/ghostty
     ./../../wallpapers
     ./theme.nix
-    ./../../utils/waybar
-    ./../../utils/dunst
+#    ./../../utils/waybar
+#    ./../../utils/dunst
+    ./../../utils/dms
   ];
 
   wayland.windowManager.sway = {
+    package = null;
     enable = true;
     systemd = {
       enable = false;
-#      variables = [ "--all" ];
     };
   };
 
@@ -65,10 +66,6 @@
     # Polkit
     lxqt.lxqt-policykit
 
-    # Screenshots
-    grim
-    slurp
-
     # Volume control
     pavucontrol
 
@@ -95,12 +92,6 @@
 
     # Media player
     vlc
-
-    # Redlight Filter
-    hyprsunset
-
-    # Screen lock
-    gtklock
 
     networkmanagerapplet
   ];
