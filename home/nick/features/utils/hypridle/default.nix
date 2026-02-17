@@ -11,7 +11,7 @@
 
     settings = {
       general = {
-        lock_cmd = "pidof hyprlock || hyprlock";
+        lock_cmd = "dms ipc call lock lock";
         before_sleep_cmd = "loginctl lock-session";
       };
 

@@ -7,16 +7,9 @@
 
 {
   # Enable hyprland
-  programs.hyprland.enable = true;
-
-  programs.uwsm = {
+  programs.hyprland = {
     enable = true;
-    waylandCompositors = {
-      hyprland = {
-        prettyName = "Hyprland";
-        binPath = "/run/current-system/sw/bin/Hyprland";
-      };
-    };
+    withUWSM = true;
   };
 
   services.greetd = {

@@ -10,7 +10,7 @@
     ./../../utils/hypridle
     ./../../wallpapers
     ./../../programs/ghostty
-    ./themes.nix
+    ./theme.nix
     ./../../utils/dms
     ./../../programs/rofi
   ];
@@ -21,10 +21,12 @@
     systemd = {
       enable = false;
     };
-  };
 
-  xdg.configFile."hypr/hyprland.conf" = {
-    source = ./hyprland.conf;
+    plugins = with pkgs; [
+      hyprlandPlugins.hy3
+    ];
+
+    extraConfig = builtins.readFile ./hyprland.conf;
   };
 
   # Ozone for chromium apps
