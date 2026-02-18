@@ -19,6 +19,5 @@
     veracrypt # Disk encryption
     keepassxc # Password management
     texliveFull # LaTeX
-    logseq
   ];
 }
