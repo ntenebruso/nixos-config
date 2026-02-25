@@ -57,6 +57,9 @@
 
       # pcmanfm
       "inode/directory" = [ "nautilus.desktop" ];
+
+      # Documents
+      "application/pdf" = [ "org.gnome.Evince.desktop" ];
     };
   };
 

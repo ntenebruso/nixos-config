@@ -12,6 +12,7 @@
       enable = true;
       restartIfChanged = true;
     };
+    enableCalendarEvents = false;
     settings = {
       currentThemeName = "green";
       launchPrefix = "uwsm app -- ";
@@ -22,7 +23,7 @@
       monoFontFamily = "JetBrainsMono Nerd Font";
     };
     session = {
-      wallpaperPath = ./../../wallpapers/pictures/forest.jpg;
+      wallpaperPath = "/home/nick/.local/share/wallpapers/forest.jpg";
     };
   };
 }
