@@ -13,6 +13,7 @@
       general = {
         lock_cmd = "dms ipc call lock lock";
         before_sleep_cmd = "loginctl lock-session";
+        inhibit_sleep = 3;
       };
 
       listener = [
