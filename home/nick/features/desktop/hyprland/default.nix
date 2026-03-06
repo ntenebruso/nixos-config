@@ -23,7 +23,7 @@
     };
 
     plugins = with pkgs; [
-      hyprlandPlugins.hy3
+      #hyprlandPlugins.hy3
     ];
 
     extraConfig = builtins.readFile ./hyprland.conf;
@@ -93,5 +93,8 @@
 
     # Media player
     vlc
+
+    # Keyring
+    gcr
   ];
 }

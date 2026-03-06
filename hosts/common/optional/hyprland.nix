@@ -24,6 +24,11 @@
   # To make blueman-applet work
   services.blueman.enable = true;
 
+  # Keyring
+  services.gnome.gnome-keyring.enable = true;
+
+  security.pam.services.login.enableGnomeKeyring = true;
+
 #  systemd.services.greetd.serviceConfig = {
 #    Type = "idle";
 #    StandardInput = "tty";
