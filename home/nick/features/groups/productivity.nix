@@ -20,5 +20,6 @@
     keepassxc # Password management
     texliveFull # LaTeX
     element-desktop # Element
+    zettlr # markdown
   ];
 }
