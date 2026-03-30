@@ -74,7 +74,7 @@
   # TLP settings
   services.tlp.settings = {
     START_CHARGE_THRESH_BAT0 = 65;
-    STOP_CHARGE_THRESH_BAT0 = 80;
+    STOP_CHARGE_THRESH_BAT0 = 85;
   };
 
   # UPower
