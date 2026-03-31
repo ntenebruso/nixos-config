@@ -17,6 +17,13 @@
     homeDirectory = "/home/nick";
   };
 
+  # Some general utils
+  home.packages = with pkgs; [
+    btop
+    zip
+    unzip
+  ];
+
   programs.zsh = {
     enable = true;
     enableCompletion = true;
