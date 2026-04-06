@@ -59,7 +59,7 @@
       "inode/directory" = [ "nautilus.desktop" ];
 
       # Documents
-      "application/pdf" = [ "org.gnome.Evince.desktop" ];
+      "application/pdf" = [ "org.gnome.Papers.desktop" ];
     };
   };
 
@@ -83,7 +83,7 @@
     kdePackages.ark
 
     # PDF viewer
-    evince
+    papers
 
     # Calculator
     gnome-calculator
@@ -96,5 +96,8 @@
 
     # Keyring
     gcr
+
+    # Gromit
+    gromit-mpx
   ];
 }
