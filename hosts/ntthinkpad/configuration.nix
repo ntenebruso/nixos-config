@@ -51,6 +51,9 @@
       # Weylus
       # commenting until build problems fixed
       ./../common/optional/weylus.nix
+
+      # Ollama
+      ./../common/optional/ollama.nix
     ];
 
   # Bootloader.
