@@ -88,6 +88,11 @@
     criticalPowerAction = "PowerOff";
   };
 
+  # graphics
+  hardware.graphics = {
+    enable = true;
+  };
+
   # Auto optimise nix store
   nix.settings.auto-optimise-store = true;
 

@@ -21,5 +21,6 @@
     texliveFull # LaTeX
     element-desktop # Element
     zettlr # markdown
+    obs-studio # video + screen recording
   ];
 }
