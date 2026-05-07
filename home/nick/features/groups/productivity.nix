@@ -22,5 +22,6 @@
     element-desktop # Element
     zettlr # markdown
     obs-studio # video + screen recording
+    qbittorrent # torrenting
   ];
 }
