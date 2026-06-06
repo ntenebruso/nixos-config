@@ -24,6 +24,7 @@
       extensions.force = true;
       extraConfig = builtins.readFile ./user.js;
     };
+    configPath = "${config.xdg.configHome}/mozilla/firefox";
   };
 
   stylix.targets.firefox = {
