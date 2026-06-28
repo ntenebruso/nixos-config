@@ -18,7 +18,7 @@
       extensions.packages = with inputs.firefox-addons.packages."x86_64-linux"; [
         ublock-origin
         bitwarden
-        tabliss
+        tablissng
         tridactyl
       ];
       extensions.force = true;

@@ -23,6 +23,7 @@
     gcc
     cmake
     gnumake
+    libimobiledevice
     home-manager
   ];
 
@@ -36,6 +37,8 @@
   # Install vim
   programs.vim.enable = true;
   programs.vim.defaultEditor = true;
+
+  services.usbmuxd.enable = true;
 
   # Nix LD
   programs.nix-ld.enable = true;

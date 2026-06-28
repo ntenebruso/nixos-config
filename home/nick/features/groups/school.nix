@@ -7,6 +7,7 @@
 
 {
   home.packages = with pkgs; [
-    logisim-evolution # Logisim Evolution
+    logisim-evolution 	# Logisim Evolution
+    zotero		# Research
   ];
 }
