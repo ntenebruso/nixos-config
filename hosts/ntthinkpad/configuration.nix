@@ -93,6 +93,16 @@
     enable = true;
   };
 
+  # razer peripherals
+  hardware.openrazer = {
+    enable = true;
+  };
+
+  environment.systemPackages = with pkgs; [
+    polychromatic
+    openrazer-daemon
+  ];
+
   # Auto optimise nix store
   nix.settings.auto-optimise-store = true;
 

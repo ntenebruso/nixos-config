@@ -21,6 +21,7 @@
     wget
     git
     gcc
+    usbutils
     cmake
     gnumake
     libimobiledevice
