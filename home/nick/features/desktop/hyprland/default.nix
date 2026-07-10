@@ -11,7 +11,8 @@
     ./../../wallpapers
     ./../../programs/ghostty
     ./theme.nix
-    ./../../utils/dms
+#    ./../../utils/dms
+    ./../../utils/noctalia
     ./../../programs/rofi
   ];
 

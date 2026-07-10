@@ -14,11 +14,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    plasma-manager = {
-      url = "github:nix-community/plasma-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-      inputs.home-manager.follows = "home-manager";
-    };
+#    plasma-manager = {
+#      url = "github:nix-community/plasma-manager";
+#      inputs.nixpkgs.follows = "nixpkgs";
+#      inputs.home-manager.follows = "home-manager";
+#    };
 
     neoshell.url = "git+file:///home/nick/code/neoshell";
 
@@ -26,6 +26,11 @@
 
     dms = {
       url = "github:AvengeMedia/DankMaterialShell/stable";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    noctalia = {
+      url = "github:noctalia-dev/noctalia";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -46,10 +51,11 @@
           inherit pkgs;
           extraSpecialArgs = { inherit inputs; };
           modules = [
-            inputs.plasma-manager.homeManagerModules.plasma-manager
+#            inputs.plasma-manager.homeManagerModules.plasma-manager
             inputs.stylix.homeModules.stylix
             inputs.neoshell.homeManagerModules.neoshell
             inputs.dms.homeModules.dank-material-shell
+	    inputs.noctalia.homeModules.default
             ./home/nick/ntthinkpad.nix
           ];
         };

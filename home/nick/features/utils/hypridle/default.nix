@@ -11,7 +11,7 @@
 
     settings = {
       general = {
-        lock_cmd = "dms ipc call lock lock";
+        lock_cmd = "noctalia msg session lock";
         before_sleep_cmd = "loginctl lock-session";
         inhibit_sleep = 3;
       };

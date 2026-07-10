@@ -12,6 +12,8 @@
     corefonts
     vista-fonts
     freefont_ttf
+#    cantarell-fonts
+    ubuntu-sans
   ];
 
   fonts = {

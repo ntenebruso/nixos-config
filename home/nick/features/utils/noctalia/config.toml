@@ -1,0 +1,19 @@
+[shell]
+font_family = "Ubuntu Sans"
+launch_apps_custom_command = "uwsm-app -- $CMD"
+
+[wallpaper]
+directory = "/home/nick/.local/share/wallpapers"
+
+[bar]
+order = ["main"]
+
+[bar.main]
+capsule = true
+start  = ["launcher", "wallpaper", "workspaces", "media"]
+center = ["clock"]
+end    = ["tray", "notifications", "clipboard", "network", "bluetooth", "volume", "brightness", "battery", "control-center", "session"]
+
+[theme]
+source = "wallpaper"
+

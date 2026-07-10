@@ -335,6 +335,26 @@
         "type": "github"
       }
     },
+    "noctalia": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1783694643,
+        "narHash": "sha256-qSSWWRGqa5HBCmh5TcYAo9FbKHbdbhTJ0xaI04Ni6IM=",
+        "owner": "noctalia-dev",
+        "repo": "noctalia",
+        "rev": "cd63b46536dc5b7a45ea4fd04039162dca2df26c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "noctalia-dev",
+        "repo": "noctalia",
+        "type": "github"
+      }
+    },
     "nur": {
       "inputs": {
         "flake-parts": [
@@ -357,29 +377,6 @@
       "original": {
         "owner": "nix-community",
         "repo": "NUR",
-        "type": "github"
-      }
-    },
-    "plasma-manager": {
-      "inputs": {
-        "home-manager": [
-          "home-manager"
-        ],
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1775856943,
-        "narHash": "sha256-b7Mp7P+q2Md5AGt4rjHfMcBykzMumFTen10ST++AuTU=",
-        "owner": "nix-community",
-        "repo": "plasma-manager",
-        "rev": "a524a6160e6df89f7673ba293cf7d78b559eb1a5",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nix-community",
-        "repo": "plasma-manager",
         "type": "github"
       }
     },
@@ -412,7 +409,7 @@
         "home-manager": "home-manager",
         "neoshell": "neoshell",
         "nixpkgs": "nixpkgs_2",
-        "plasma-manager": "plasma-manager",
+        "noctalia": "noctalia",
         "stylix": "stylix"
       }
     },
