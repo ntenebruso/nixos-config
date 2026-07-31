@@ -2,6 +2,13 @@
 font_family = "Ubuntu Sans"
 launch_apps_custom_command = "uwsm-app -- $CMD"
 
+[[shell.session.actions]]
+    action = "lock"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "l"
+    variant = "default"
+
 [wallpaper]
 directory = "/home/nick/.local/share/wallpapers"
 

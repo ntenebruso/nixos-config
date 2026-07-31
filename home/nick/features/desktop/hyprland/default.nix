@@ -14,6 +14,7 @@
 #    ./../../utils/dms
     ./../../utils/noctalia
     ./../../programs/rofi
+    ./../../programs/yazi
   ];
 
   wayland.windowManager.hyprland = {
