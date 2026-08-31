@@ -41,6 +41,11 @@
 
   services.usbmuxd.enable = true;
 
+  # Custom root certificates
+  security.pki.certificateFiles = [
+    ./../../../certs/homelab-ca.pem
+  ];
+
   # Nix LD
   programs.nix-ld.enable = true;
 

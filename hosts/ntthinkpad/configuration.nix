@@ -98,6 +98,9 @@
     enable = true;
   };
 
+  # rtl-sdr
+  hardware.rtl-sdr.enable = true;
+
   environment.systemPackages = with pkgs; [
     polychromatic
     openrazer-daemon

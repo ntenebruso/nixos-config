@@ -23,5 +23,6 @@
     zettlr # markdown
     obs-studio # video + screen recording
     qbittorrent # torrenting
+    sdrpp # SDR software
   ];
 }
