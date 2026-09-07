@@ -12,6 +12,7 @@
     ./../programs/emacs
     ./../programs/vscodium
     ./../programs/thunderbird
+    ./../programs/opencode
   ];
 
   home.packages = with pkgs; [
@@ -24,5 +25,6 @@
     obs-studio # video + screen recording
     qbittorrent # torrenting
     sdrpp # SDR software
+    ungoogled-chromium # backup chromium
   ];
 }
