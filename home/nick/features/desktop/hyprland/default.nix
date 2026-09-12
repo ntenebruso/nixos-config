@@ -97,7 +97,7 @@
     vlc
 
     # Keyring
-    gcr
+    seahorse
 
     # Gromit
     gromit-mpx
