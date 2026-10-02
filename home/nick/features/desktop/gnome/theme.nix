@@ -43,6 +43,16 @@
         package = pkgs.adw-gtk3;
       };
     };
+
+    iconTheme = {
+      package = pkgs.adwaita-icon-theme;
+      name = "Adwaita";
+    };
+
+    font = {
+      package = pkgs.adwaita-fonts;
+      name = "Adwaita Sans";
+    };
   };
 
   programs.ghostty.settings = {

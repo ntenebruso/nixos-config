@@ -22,10 +22,10 @@
       ./../common/optional/tlp.nix
 
       # Hyprland
-      ./../common/optional/hyprland.nix
+      # ./../common/optional/hyprland.nix
 
       # GNOME
-      # ./../common/optional/gnome.nix
+      ./../common/optional/gnome.nix
 
       # Sway
       # ./../common/optional/sway.nix
@@ -73,6 +73,9 @@
     HandleLidSwitchDocked = "ignore";
     LidSwitchIgnoreInhibited = "no";
   };
+
+  # firmware updates
+  services.fwupd.enable = true;
 
   # TLP settings
   services.tlp.settings = {

@@ -14,6 +14,7 @@ in
   imports = [
     ./theme.nix
     ../../programs/ghostty
+    ../../wallpapers
   ];
 
 
@@ -54,6 +55,7 @@ in
       clock-format = "12h";
     };
     "org/gnome/shell" = {
+      always-show-log-out = true;
       disable-user-extensions = false;
       enabled-extensions = [
         pkgs.gnomeExtensions.appindicator.extensionUuid
@@ -115,9 +117,21 @@ in
     enable = true;
     defaultApplications = {
       # Firefox
+      "text/html" = [ "firefox.desktop" ];
       "x-scheme-handler/http" = [ "firefox.desktop" ];
       "x-scheme-handler/https" = [ "firefox.desktop" ];
-      "text/html" = [ "firefox.desktop" ];
+
+      # Thunderbird
+      "message/rfc822" = [ "thunderbird.desktop" ];
+      "x-scheme-handler/mailto" = [ "thunderbird.desktop" ];
+      "text/calendar" = [ "thunderbird.desktop" ];
+      "text/x-vcard" = [ "thunderbird.desktop" ];
+
+      # pcmanfm
+      "inode/directory" = [ "nautilus.desktop" ];
+
+      # Documents
+      "application/pdf" = [ "org.gnome.Papers.desktop" ];
     };
   };
 

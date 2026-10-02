@@ -14,6 +14,7 @@
 
   services.greetd = {
     enable = true;
+    useTextGreeter = true;
     settings = {
       default_session = {
         command = "${pkgs.tuigreet}/bin/tuigreet --time --remember-session";
@@ -26,6 +27,7 @@
 
   # Keyring
   services.gnome.gnome-keyring.enable = true;
+  security.pam.services.greetd.enableGnomeKeyring = true;
 
 #  systemd.services.greetd.serviceConfig = {
 #    Type = "idle";

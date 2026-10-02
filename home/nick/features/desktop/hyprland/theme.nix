@@ -14,6 +14,7 @@
     freefont_ttf
 #    cantarell-fonts
     ubuntu-sans
+    cm_unicode
   ];
 
   fonts = {
