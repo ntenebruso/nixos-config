@@ -8,7 +8,7 @@
 {
   home.packages = with pkgs; [
     logisim-evolution 	# Logisim Evolution
-    zotero		# Research
+#    zotero		# Research
   ];
 
   # RClone to sync GDrive
