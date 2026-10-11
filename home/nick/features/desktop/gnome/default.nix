@@ -24,6 +24,7 @@ in
     gnome-tweaks
     dconf-editor
     vlc
+    libgtop
 
     # Screenshotting
     grim
@@ -37,7 +38,12 @@ in
     gnomeExtensions.forge
     gnomeExtensions.dash-to-dock
     gnomeExtensions.gsconnect
+    gnomeExtensions.astra-monitor
   ];
+
+  home.sessionVariables = {
+    GI_TYPELIB_PATH = "${pkgs.gnomeExtensions.astra-monitor}/lib/girepository-1.0:$GI_TYPELIB_PATH";
+  };
 
   dconf.settings = {
     "org/gnome/mutter" = {
@@ -64,6 +70,7 @@ in
         #pkgs.gnomeExtensions.forge.extensionUuid
         pkgs.gnomeExtensions.dash-to-dock.extensionUuid
         pkgs.gnomeExtensions.gsconnect.extensionUuid
+        pkgs.gnomeExtensions.astra-monitor.extensionUuid
         "user-theme@gnome-shell-extensions.gcampax.github.com"
       ];
       favorite-apps = [
@@ -88,6 +95,10 @@ in
     };
     "org/gnome/shell/extensions/caffeine" = {
       toggle-shortcut = [ "<Super>c" ];
+    };
+    "org/gnome/shell/extensions/astra-monitor" = {
+      storage-header-show = false;
+      network-header-show = false;
     };
     "org/gnome/Console" = {
       custom-font = "JetBrainsMono Nerd Font 10 Mono";
