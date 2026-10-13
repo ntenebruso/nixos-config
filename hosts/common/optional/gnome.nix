@@ -23,4 +23,12 @@
     layout = "us";
     variant = "";
   };
+
+  environment.systemPackages = with pkgs; [
+    libgtop
+  ];
+
+  environment.variables = {
+    GI_TYPELIB_PATH = "${pkgs.libgtop}/lib/girepository-1.0";
+  };
 }

@@ -24,7 +24,6 @@ in
     gnome-tweaks
     dconf-editor
     vlc
-    libgtop
 
     # Screenshotting
     grim
@@ -40,10 +39,6 @@ in
     gnomeExtensions.gsconnect
     gnomeExtensions.astra-monitor
   ];
-
-  home.sessionVariables = {
-    GI_TYPELIB_PATH = "${pkgs.gnomeExtensions.astra-monitor}/lib/girepository-1.0:$GI_TYPELIB_PATH";
-  };
 
   dconf.settings = {
     "org/gnome/mutter" = {
