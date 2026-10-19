@@ -26,6 +26,8 @@
     gnumake
     libimobiledevice
     home-manager
+    man-pages
+    man-pages-posix
   ];
 
   # Filesystems management
