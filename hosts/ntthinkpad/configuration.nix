@@ -97,9 +97,9 @@
   };
 
   # razer peripherals
-  hardware.openrazer = {
-    enable = true;
-  };
+#  hardware.openrazer = {
+#    enable = true;
+#  };
 
   # rtl-sdr
   hardware.rtl-sdr.enable = true;

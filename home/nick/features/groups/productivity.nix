@@ -20,6 +20,7 @@
     veracrypt # Disk encryption
     keepassxc # Password management
     texliveFull # LaTeX
+    python3Packages.pygments # Pygments for minted
     element-desktop # Element
     zettlr # markdown
     obs-studio # video + screen recording

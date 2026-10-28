@@ -15,6 +15,7 @@ in
     ./theme.nix
     ../../programs/ghostty
     ../../wallpapers
+    ./blur-my-shell.nix
   ];
 
 
@@ -32,7 +33,14 @@ in
 
     # Gnome Extensions
     gnomeExtensions.appindicator
-    gnomeExtensions.blur-my-shell
+    (gnomeExtensions.blur-my-shell.overrideAttrs (oldAttrs: {
+        version = "76";
+	src = pkgs.fetchzip {
+	    url = "https://github.com/aunetx/blur-my-shell/releases/download/v76/blur-my-shell@aunetx.shell-extension.zip";
+	    stripRoot = false;
+	    hash = "sha256-QU0+Y10jhYk0kYOrb94jRYi8TXZD/WvZkw6IqI7Qcrw=";
+	};
+    }))
     gnomeExtensions.caffeine
     gnomeExtensions.forge
     gnomeExtensions.dash-to-dock
@@ -78,12 +86,6 @@ in
     };
     "org/gnome/desktop/sound" = {
       event-sounds = false;
-    };
-    "org/gnome/shell/extensions/blur-my-shell/panel" = {
-      blur = false;
-    };
-    "org/gnome/shell/extensions/blur-my-shell/dash-to-dock" = {
-      blur = false;
     };
     "org/gnome/shell/extensions/paperwm" = {
       show-window-position-bar = false;
