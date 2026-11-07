@@ -20,7 +20,7 @@
 #      inputs.home-manager.follows = "home-manager";
 #    };
 
-    neoshell.url = "git+file:///home/nick/code/neoshell";
+    # neoshell.url = "git+file:///home/nick/code/neoshell";
 
     stylix.url = "github:danth/stylix";
 
@@ -45,6 +45,9 @@
         ntthinkpad = lib.nixosSystem {
           modules = [ ./hosts/ntthinkpad/configuration.nix ];
         };
+        ntzenbook = lib.nixosSystem {
+          modules = [ ./hosts/ntzenbook/configuration.nix ];
+        };
       };
       homeConfigurations = {
         "nick@ntthinkpad" = home-manager.lib.homeManagerConfiguration {
@@ -57,6 +60,19 @@
             inputs.dms.homeModules.dank-material-shell
 	    inputs.noctalia.homeModules.default
             ./home/nick/ntthinkpad.nix
+          ];
+        };
+
+        "nick@ntzenbook" = home-manager.lib.homeManagerConfiguration {
+          inherit pkgs;
+          extraSpecialArgs = { inherit inputs; };
+          modules = [
+#            inputs.plasma-manager.homeManagerModules.plasma-manager
+            inputs.stylix.homeModules.stylix
+#            inputs.neoshell.homeManagerModules.neoshell
+            inputs.dms.homeModules.dank-material-shell
+	    inputs.noctalia.homeModules.default
+            ./home/nick/ntzenbook.nix
           ];
         };
       };
