@@ -19,7 +19,6 @@
   # Required system packages
   environment.systemPackages = with pkgs; [
     wget
-    git
     gcc
     usbutils
     cmake
@@ -29,6 +28,15 @@
     man-pages
     man-pages-posix
   ];
+
+  # git
+  programs.git = {
+    enable = true;
+    package = pkgs.git.override { withLibsecret = true; };
+    config = {
+      credential.helper = "libsecret";
+    };
+  };
 
   # Filesystems management
   services.gvfs.enable = true;

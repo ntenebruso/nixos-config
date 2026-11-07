@@ -48,6 +48,9 @@
       # Fingerprint sensor
       # ./../common/optional/fingerprint.nix
 
+      # howdy camera
+      ./../common/optional/howdy.nix
+
       # Weylus
       # commenting until build problems fixed
       ./../common/optional/weylus.nix
@@ -94,6 +97,11 @@
   # graphics
   hardware.graphics = {
     enable = true;
+  };
+
+  # tlp config
+  services.tlp.settings = {
+    STOP_CHARGE_THRESH_BAT0 = 80;
   };
 
   # Auto optimise nix store
