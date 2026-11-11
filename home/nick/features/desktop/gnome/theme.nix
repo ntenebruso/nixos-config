@@ -28,7 +28,7 @@
 
   dconf.settings = {
     "org/gnome/desktop/interface" = {
-      accent-color = "green";
+      accent-color = "teal";
       color-scheme = "prefer-dark";
     };
   };

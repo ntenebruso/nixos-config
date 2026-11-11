@@ -73,6 +73,14 @@
   # Configure network connections interactively with nmcli or nmtui.
   networking.networkmanager.enable = true;
 
+  # Howdy settings specific to this device
+  services.howdy.settings = {
+    video = {
+      device_path = "/dev/video2";
+      dark_threshold = 80;
+    };
+  };
+
 
   # Power key and lid
   services.logind.settings.Login = {
