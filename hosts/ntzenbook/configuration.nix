@@ -69,6 +69,10 @@
   environment.systemPackages = with pkgs; [ git ];
 
   networking.hostName = "ntzenbook"; # Define your hostname.
+  networking.firewall = {
+    enable = true;
+    checkReversePath = "loose";
+  };
 
   # Configure network connections interactively with nmcli or nmtui.
   networking.networkmanager.enable = true;

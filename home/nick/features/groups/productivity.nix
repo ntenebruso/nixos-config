@@ -16,7 +16,8 @@
   ];
 
   home.packages = with pkgs; [
-    libreoffice # Editing suite
+    # libreoffice # Editing suite
+    onlyoffice-desktopeditors # Editing suite
     veracrypt # Disk encryption
     keepassxc # Password management
     texliveFull # LaTeX

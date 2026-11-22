@@ -34,6 +34,7 @@
       ll = "ls -l";
       sysrebuild = "sudo nixos-rebuild switch --flake ~/.dotfiles/";
       usrrebuild = "home-manager switch --flake ~/.dotfiles/";
+      v = "nvim";
     };
 
     history = {

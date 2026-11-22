@@ -6,5 +6,8 @@
 }:
 
 {
-  programs.neovim.enable = true;
+  programs.neovim = {
+    enable = true;
+    initLua = builtins.readFile ./config/init.lua;
+  };
 }
